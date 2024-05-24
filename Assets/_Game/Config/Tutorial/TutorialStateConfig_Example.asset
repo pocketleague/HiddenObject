@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230f1c13aa374a9cb9418fe1406bbf59, type: 3}
+  m_Name: TutorialStateConfig_Example
+  m_EditorClassIdentifier: 
+  id: ExampleId
+  stageId: 0
+  startDelay: 4
+  pauseGame: 1
+  blockInput: 1
+  showWindow: 0
+  windowTitle: Title1
+  windowBody: Body1
+  windowImage: {fileID: 21300000, guid: 5a6eb43ed59924014897ffd06cb0240a, type: 3}
+  showPopUp: 1
+  popUpText: Tap anywhere to swing your bat

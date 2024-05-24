@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6566890729762967796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6566890729762967794}
+  - component: {fileID: 6566890729762967797}
+  m_Layer: 0
+  m_Name: CoreSceneContext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6566890729762967794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6566890729762967796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6566890729762967797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6566890729762967796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers:
+  - {fileID: 11400000, guid: 95e0fcc843f70134faa29f134ec3c07c, type: 2}
+  - {fileID: 11400000, guid: 69c5bff8cc28061408a6f15001635c6e, type: 2}
+  - {fileID: 11400000, guid: 9d0114ae7dccdf746a206cd74ca42304, type: 2}
+  - {fileID: 11400000, guid: e27c77c683ee7d147acbac9813c17e51, type: 2}
+  - {fileID: 11400000, guid: bfa686f24a96d99489ee9148ef5504b0, type: 2}
+  - {fileID: 11400000, guid: 4cc9cdf0202bca24ea761cc048b07554, type: 2}
+  - {fileID: 11400000, guid: 0312a29ebf07d1940a18348c864b8d1c, type: 2}
+  - {fileID: 11400000, guid: e6210144405ec1e4da2d163dfbc81646, type: 2}
+  - {fileID: 11400000, guid: be87e88b02f1853459f30a196bf6c627, type: 2}
+  - {fileID: 11400000, guid: 9a8efabad94b20444a7bc52f156410de, type: 2}
+  - {fileID: 11400000, guid: a83c20371043f2144a65ee93d179720a, type: 2}
+  - {fileID: 11400000, guid: 2a2d8170fba9c514e9155e8e529fb71d, type: 2}
+  - {fileID: 11400000, guid: aeadcd99252c0134eb69549e90565139, type: 2}
+  - {fileID: 11400000, guid: ed8b08221afa4174dab295b2922d8aa8, type: 2}
+  - {fileID: 11400000, guid: 2a0f7794bd1790343b048082ac58c99c, type: 2}
+  _monoInstallers: []
+  _installerPrefabs: []
+  _autoRun: 1
+  _parentNewObjectsUnderSceneContext: 0
+  _contractNames:
+  - Core
+  _parentContractNames: []

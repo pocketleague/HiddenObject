@@ -1,0 +1,30 @@
+﻿Code;en-us;zn-cn;zn-ch
+LANGUAGE_NAME;English;中文-简体;中文-繁體
+LABEL_LOADING;Loading;加载中;加載中
+BUTTON_SKIP;Skip;跳过;跳過
+LABEL_LEVEL;Level;级别;級別
+LABEL_LEVELCOMPLETE;Complete!;完成!;完成!
+LABEL_LEVELFAILED;Try again;再试一次;再試一次
+LABEL_GOLDEARNED;Gold earned:;赚取的奖励：;賺取的獎勵：
+LABEL_TAPTOSTART;Tap to start;开始;開始
+LABEL_TAPTOCONTINUE;Tap to continue;继续;繼續
+LABEL_CLAIM3;Claim x3;领取3倍奖励;領取3倍獎勵
+LABEL_CLAIM5;Claim x5;领取5倍奖励;領取5倍獎勵
+LABEL_SETTINGS;Settings;设置;設置
+BUTTON_PRIVACYSETTINGS;Privacy Settings;隐私设置;隱私設置
+BUTTON_PRIVACYPOLICY;Privacy Policy;隐私政策;隱私政策
+BUTTON_TERMSOFUSE;Terms of Use;使用条款;使用條款
+LABEL_SHOP;Shop;商店;商店
+BUTTON_UNLOCK;Unlock;解锁;解鎖
+LABEL_SKINUNLOCKED;Skin unlocked!;解锁新皮肤!;解鎖新皮膚!
+SKIN_COMMON;Common;一般般;一般般
+SKIN_RARE;Rare;稀有;稀有
+SKIN_LEGENDARY;Legendary;罕见;罕見
+LABEL_COMINGSOON;More coming soon;更多精彩;更多精彩
+BUTTON_SKINSELECT;Select;选择;選擇
+BUTTON_SKINBACK;Back;返回;返回
+LABEL_BONUSREWARD;Bonus reward!;获得奖励!;獲得獎勵!
+BUTTON_BONUSSKIP;Miss out;错过;錯過
+LABEL_QUITGAME;Quit game?;放弃游戏？;放棄遊戲
+BUTTON_QUITCONFIRM;Quit;退出;退出
+BUTTON_QUITREJECT;Back;返回;返回

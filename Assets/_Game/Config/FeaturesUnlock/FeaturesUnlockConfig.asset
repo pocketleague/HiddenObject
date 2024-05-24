@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dabb78f2d144b62b90f36f61df96801, type: 3}
+  m_Name: FeaturesUnlockConfig
+  m_EditorClassIdentifier: 
+  unlockableFeatures: []
+  progressBarFeatures: []
+  widgetPrefab: {fileID: 9149833939090399159, guid: 441e16da2049411448ae10a9c8d276f6, type: 3}

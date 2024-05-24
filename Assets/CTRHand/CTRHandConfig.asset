@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c423270403b1fd4e8f7d2f155dc4483, type: 3}
+  m_Name: CTRHandConfig
+  m_EditorClassIdentifier: 
+  hand: {fileID: 21300000, guid: c2826acb3ac70974d8c2352a0d1a9c69, type: 3}
+  scale: 2
+  angle: 30
+  fadeSpeed: 10
+  scaleAmount: 0.9
+  scaleSpeed: 5
+  alwaysVisible: 0
+  playTapAnimation: 1

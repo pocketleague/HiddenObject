@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0fcc6ea930354cbd9a75ba3663bda73, type: 3}
+  m_Name: GameplayStatesConfig
+  m_EditorClassIdentifier: 
+  states:
+  - state: 1
+    sprite: {fileID: 0}
+  - state: 2
+    sprite: {fileID: 0}
+  widgetPrefab: {fileID: 2559546628149557791, guid: 4bf2749c5f5efa345b6f66331417778e, type: 3}
+  connectorPrefab: {fileID: 3182134761529555547, guid: 385b115641b942d4a9610af6d634d09b, type: 3}
+  enterFirstStateDelay: 0.5
+  defaultEnterStateDelay: 2
+  customEnterStateDelays: []
+  defaultEndGameDelay: 2
+  customEndGameOnStateDelays:
+  - state: 1
+    delay: 0
+  - state: 2
+    delay: 0
+  tyingHairDelay: 3.5
