@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Scripts.GameLoop;
 using Scripts.Stages;
 using Scripts.FluidInjection;
-using Scripts.Squishing;
 using UnityEngine;
 using Zenject;
 
@@ -33,14 +32,13 @@ namespace Scripts.GameplayStates
 
 
         [Inject]
-        private void Construct(GameplayStatesConfig config, IStagesService stagesService, IPlayerLoop playerLoop, IFluidInjectionService fluidInjectionService, ISquishingService squishingService)
+        private void Construct(GameplayStatesConfig config, IStagesService stagesService, IPlayerLoop playerLoop, IFluidInjectionService fluidInjectionService)
         {
             _config = config;
             _stagesService = stagesService;
 
             _gameplayStates = new Dictionary<EGameplayState, IGameplayState> {
-                { EGameplayState.FluidInjection, (IGameplayState)fluidInjectionService},
-                { EGameplayState.Squishing, (IGameplayState)squishingService }
+                { EGameplayState.FluidInjection, (IGameplayState)fluidInjectionService}
             };
 
             //customersService.OnCustomerSatDown += StartGameplayPhases;

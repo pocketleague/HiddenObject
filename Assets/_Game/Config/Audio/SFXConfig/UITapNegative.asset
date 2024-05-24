@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ef5d643fbe94e348abdf4cfe9cc7169, type: 3}
-  m_Name: Stage_1
+  m_Script: {fileID: 11500000, guid: 98739091b3f254560bdaa690b89f4c09, type: 3}
+  m_Name: UITapNegative
   m_EditorClassIdentifier: 
-  states: 01000000
+  id: UITapNegative
+  clip: {fileID: 8300000, guid: cd76435249af2a84a9d28bfe1131b1a8, type: 3}
+  volume: 1

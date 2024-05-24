@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: SFXConfig
   m_EditorClassIdentifier: 
   clips:
+  - {fileID: 11400000, guid: db13250969f59654589b7e6144fcc20b, type: 2}
   - {fileID: 11400000, guid: 7e8096a6420c14c86a2e634dedc3b07c, type: 2}
+  - {fileID: 11400000, guid: 374472b5c156dfa41b7ca30774b20d82, type: 2}
+  - {fileID: 11400000, guid: 1754d5d8c879cdf4fb40fc5f90e6d87d, type: 2}

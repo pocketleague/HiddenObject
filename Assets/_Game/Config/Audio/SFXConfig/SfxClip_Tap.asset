@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98739091b3f254560bdaa690b89f4c09, type: 3}
   m_Name: SfxClip_Tap
   m_EditorClassIdentifier: 
-  id: 
+  id: UITapPositive
   clip: {fileID: 8300000, guid: cd76435249af2a84a9d28bfe1131b1a8, type: 3}
   volume: 1

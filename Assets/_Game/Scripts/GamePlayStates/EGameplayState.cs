@@ -4,6 +4,5 @@
     {
         None,
         FluidInjection,
-        Squishing,
     }
 }
