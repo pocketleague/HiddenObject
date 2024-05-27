@@ -38,9 +38,9 @@ namespace Scripts.Stages
             _stagesSet = stagesSet;
             CurrentStageId = PlayerPrefs.GetInt(StagesPrefsStrings.CURRENT_STAGE, 0);
 
-            new GameObject("StageSpawner").AddComponent<StageSpawner>().Initialize(this);
+            //new GameObject("StageSpawner").AddComponent<StageSpawner>().Initialize(this);
 
-            playerLoop.OnUpdateTick += HandleDelayedStageFinished;
+            //playerLoop.OnUpdateTick += HandleDelayedStageFinished;
         }
 
         public void SpawnCurrentStage()
@@ -87,27 +87,18 @@ namespace Scripts.Stages
 
         public void FinishStageSuccess(float delay = 0f)
         {
-            Debug.Log("finish 1");
-
             if (_stageResolved || _resolvePending)
                 return;
 
-            Debug.Log("finish 2");
-
             if (delay > 0f)
             {
-                Debug.Log("finish 3");
-
                 _resolvePending = true;
                 _resolveType = true;
                 _resolvePendingTimer = delay;
                 return;
             }
 
-            Debug.Log("finish 4");
-
             _stageResolved = true;
-            Debug.Log("finish 5");
 
             OnStageFinished.Invoke(CurrentStageId, true);
 

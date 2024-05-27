@@ -1,39 +1,53 @@
 ﻿using Scripts.Stages;
 using UnityEngine;
+using UnityEngine.UI;
+
 using Zenject;
+using GameplayCenter;
+using Scripts.Core;
 
 namespace Scripts.UI
 {
     [RequireComponent(typeof( Window ) )]
     public class GameplayWindow : MonoBehaviour
     {
-        [Inject]
-        private IStagesService _stagesService;
-        
+
+        [Inject] private IGameplayCenterService _gameplayService;
+        [Inject] private IStateManagerService _stateManager;
+
         private Window _targetWindow;
+
+        [SerializeField] Button btnEnd;
 
         private void Awake()
         {
             _targetWindow = GetComponent<Window>();
 
-            _stagesService.OnStageFinished += OnStageFinished;
-            _stagesService.OnStageStarted  += OnGameStarted;
+            _gameplayService.OnGamePlayStarted  += OnGamePlayStarted;
+            _gameplayService.OnGamePlayEnded    += OnGamePlayEnded;
+
+            btnEnd.onClick.AddListener(End);
         }
 
         private void OnDestroy()
         {
-            _stagesService.OnStageFinished -= OnStageFinished;
-            _stagesService.OnStageStarted  -= OnGameStarted;
+            _gameplayService.OnGamePlayStarted  -= OnGamePlayStarted;
+            _gameplayService.OnGamePlayEnded    -= OnGamePlayEnded;
         }
 
-        private void OnGameStarted( int stageId )
+        private void OnGamePlayStarted()
         {
             _targetWindow.Open();
         }
 
-        private void OnStageFinished( int stageId, bool success )
+        private void OnGamePlayEnded()
         {
             _targetWindow.Close();
+        }
+
+        void End()
+        {
+            _stateManager.StartNextState(EState.RewardCenter);
         }
     }
 }

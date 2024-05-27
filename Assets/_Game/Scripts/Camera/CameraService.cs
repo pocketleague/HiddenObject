@@ -2,6 +2,7 @@
 using Scripts.Stages;
 using UnityEngine;
 using Zenject;
+using HomeCenter;
 
 namespace Scripts.Camera
 {
@@ -14,15 +15,15 @@ namespace Scripts.Camera
         public CameraStateConfig CurrentState { get; private set; }
 
         [Inject]
-        private void Construct( CameraConfig config, IStagesService stagesService, IPlayerLoop playerLoop )
+        private void Construct( CameraConfig config, IStagesService stagesService, IPlayerLoop playerLoop, IHomeCenterService homeCenterService )
         {
             _config        = config;
             _stagesService = stagesService;
             CameraView     = Object.Instantiate( _config.cameraViewPrefab );
 
-            _stagesService.OnStageSpawned  += OnStageSpawned;
             _stagesService.OnStageStarted  += OnStageStarted;
-            _stagesService.OnStageFinished += OnStageFinished;
+
+            homeCenterService.OnHomeCenterStarted += HomeCenterCam;
 
             playerLoop.OnUpdateTick += HandleCameraState;
         }
@@ -40,17 +41,12 @@ namespace Scripts.Camera
             CameraView.cameraObject.farClipPlane       = Mathf.Lerp     ( CameraView.cameraObject.farClipPlane        , CurrentState.clipping.y              , Time.deltaTime * CurrentState.clippingChangeSpeed );
         }
 
-        private void OnStageFinished( int stageId, bool success )
-        {
-            ChangeCameraState( success ? "StageFinishedSuccess" : "StageFinishedFailure" );
-        }
-
         private void OnStageStarted( int stageId )
         {
             ChangeCameraState( "Gameplay" );
         }
 
-        private void OnStageSpawned( int stageId, StageConfig stageConfig )
+        private void HomeCenterCam()
         {
             ChangeCameraState( "MainMenu" );
         }
