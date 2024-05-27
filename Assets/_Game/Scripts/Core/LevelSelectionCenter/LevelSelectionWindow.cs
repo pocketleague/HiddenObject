@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 using Zenject;
 using Scripts.UI;
+using TMPro;
 
 namespace Scripts.Core.LevelSelection
 {
@@ -14,8 +15,11 @@ namespace Scripts.Core.LevelSelection
         [Inject] private IStateManagerService _stateManagerService;
         private Window _targetWindow;
 
-        [SerializeField]
-        private Button _btnStartGameCenter;
+
+        [SerializeField] private Button _btnStartGameCenter;
+        [SerializeField] private Transform contentParent;
+        [SerializeField] private GameObject pf_grid;
+
 
         private void Awake()
         {
@@ -36,6 +40,8 @@ namespace Scripts.Core.LevelSelection
         void Open()
         {
             _targetWindow.Open();
+
+            PopulateGrid();
         }
 
         void Close()
@@ -46,6 +52,16 @@ namespace Scripts.Core.LevelSelection
         void StartGameCenterClicked()
         {
             _stateManagerService.ChangeState(EState.GameplayCenter);
+        }
+
+        void PopulateGrid()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                GameObject newItem = Instantiate(pf_grid, contentParent);
+                // Optionally, set data on the new item (e.g., update text or images)
+                newItem.GetComponentInChildren<TextMeshProUGUI>().text = "Item " + (i + 1);
+            }
         }
     }
 }
