@@ -7,6 +7,6 @@ namespace Scripts.Core
     public interface IStateManagerService
     {
         void SpawnStateCenter();
-        void StartNextState(EState state);
+        void ChangeState(EState state);
     }
 }

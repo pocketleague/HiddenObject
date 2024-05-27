@@ -45,7 +45,7 @@ namespace Scripts.UI
 
         void End()
         {
-            _stateManager.StartNextState(EState.HomeCenter);
+            _stateManager.ChangeState(EState.HomeCenter);
         }
     }
 }

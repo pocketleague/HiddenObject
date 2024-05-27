@@ -37,10 +37,10 @@ namespace Scripts.Core
 
         public void SpawnStateCenter()
         {
-            StartNextState(EState.HomeCenter);
+            ChangeState(EState.HomeCenter);
         }
 
-        public void StartNextState(EState state)
+        public void ChangeState(EState state)
         {
             FinishCurrentState();
 

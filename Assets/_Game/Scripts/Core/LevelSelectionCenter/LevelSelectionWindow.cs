@@ -45,7 +45,7 @@ namespace Scripts.Core.LevelSelection
 
         void StartGameCenterClicked()
         {
-            _stateManagerService.StartNextState(EState.GameplayCenter);
+            _stateManagerService.ChangeState(EState.GameplayCenter);
         }
     }
 }

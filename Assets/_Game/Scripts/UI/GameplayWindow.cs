@@ -47,7 +47,7 @@ namespace Scripts.UI
 
         void End()
         {
-            _stateManager.StartNextState(EState.RewardCenter);
+            _stateManager.ChangeState(EState.RewardCenter);
         }
     }
 }
