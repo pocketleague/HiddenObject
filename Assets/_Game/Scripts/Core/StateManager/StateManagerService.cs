@@ -6,6 +6,7 @@ using HomeCenter;
 using GameplayCenter;
 using RewardCenter;
 using System;
+using Scripts.Core.LevelSelection;
 
 namespace Scripts.Core
 {
@@ -22,10 +23,11 @@ namespace Scripts.Core
         private EState _pendingState;
 
         [Inject]
-        private void Construct(IHomeCenterService homeCenterService, IGameplayCenterService gameplayService, IRewardCenterService rewardCenterService)
+        private void Construct(IHomeCenterService homeCenterService, IGameplayCenterService gameplayService, IRewardCenterService rewardCenterService, ILevelSelectionService levelSelectionService)
         {
             _states = new Dictionary<EState, IState> {
                 { EState.HomeCenter,        (IState)homeCenterService},
+                { EState.LevelSelection,    (IState)levelSelectionService },
                 { EState.GameplayCenter,    (IState)gameplayService },
                 { EState.RewardCenter,      (IState)rewardCenterService }
             };

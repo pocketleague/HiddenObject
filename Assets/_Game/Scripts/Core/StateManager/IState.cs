@@ -16,5 +16,6 @@ public enum EState
     None,
     HomeCenter,
     GameplayCenter,
-    RewardCenter
+    RewardCenter,
+    LevelSelection
 }

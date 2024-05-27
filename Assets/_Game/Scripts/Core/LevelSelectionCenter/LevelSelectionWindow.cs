@@ -1,17 +1,16 @@
-﻿using Scripts.Stages;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 using Zenject;
-using HomeCenter;
-using Scripts.Core;
+using Scripts.UI;
 
-namespace Scripts.UI
+namespace Scripts.Core.LevelSelection
 {
-    [RequireComponent(typeof( Window ) )]
-    public class HomeCenterWindow : MonoBehaviour
+    public class LevelSelectionWindow : MonoBehaviour
     {
-
-        [Inject] private IHomeCenterService _homeCenterService;
+        [Inject] private ILevelSelectionService _levelSelectionService;
         [Inject] private IStateManagerService _stateManagerService;
         private Window _targetWindow;
 
@@ -22,16 +21,16 @@ namespace Scripts.UI
         {
             _targetWindow = GetComponent<Window>();
 
-            _homeCenterService.OnHomeCenterStarted  += Open;
-            _homeCenterService.OnHomeCenterEnded    += Close;
+            _levelSelectionService.OnLevelSelectionStarted += Open;
+            _levelSelectionService.OnLevelSelectionEnded += Close;
 
             _btnStartGameCenter.onClick.AddListener(StartGameCenterClicked);
         }
 
         private void OnDestroy()
         {
-            _homeCenterService.OnHomeCenterStarted  -= Open;
-            _homeCenterService.OnHomeCenterEnded    -= Close;
+            _levelSelectionService.OnLevelSelectionStarted -= Open;
+            _levelSelectionService.OnLevelSelectionEnded -= Close;
         }
 
         void Open()
@@ -46,7 +45,7 @@ namespace Scripts.UI
 
         void StartGameCenterClicked()
         {
-            _stateManagerService.StartNextState(EState.LevelSelection);
+            _stateManagerService.StartNextState(EState.GameplayCenter);
         }
     }
 }

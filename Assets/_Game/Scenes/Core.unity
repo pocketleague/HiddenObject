@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6566890729762967797, guid: 369f0794a556ea74a9a4f7dadbea55f7, type: 3}
       propertyPath: _scriptableObjectInstallers.Array.size
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6566890729762967797, guid: 369f0794a556ea74a9a4f7dadbea55f7, type: 3}
       propertyPath: _scriptableObjectInstallers.Array.data[15]
@@ -190,9 +190,13 @@ PrefabInstance:
     - target: {fileID: 6566890729762967797, guid: 369f0794a556ea74a9a4f7dadbea55f7, type: 3}
       propertyPath: _scriptableObjectInstallers.Array.data[17]
       value: 
-      objectReference: {fileID: 11400000, guid: a5399c6814646497fa9cda46f64a2eec, type: 2}
+      objectReference: {fileID: 11400000, guid: fb464c9f47ffa4f5d98c8654304c9fad, type: 2}
     - target: {fileID: 6566890729762967797, guid: 369f0794a556ea74a9a4f7dadbea55f7, type: 3}
       propertyPath: _scriptableObjectInstallers.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: a5399c6814646497fa9cda46f64a2eec, type: 2}
+    - target: {fileID: 6566890729762967797, guid: 369f0794a556ea74a9a4f7dadbea55f7, type: 3}
+      propertyPath: _scriptableObjectInstallers.Array.data[19]
       value: 
       objectReference: {fileID: 11400000, guid: 961e8e82a156947e98e8b5ba84a0f2c6, type: 2}
     m_RemovedComponents: []
