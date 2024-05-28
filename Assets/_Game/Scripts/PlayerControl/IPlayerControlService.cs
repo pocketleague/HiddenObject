@@ -9,7 +9,8 @@ namespace Scripts.PlayerControl
         
         PlayerControlDragModule     DragModule     { get; }
         PlayerControlJoystickModule JoystickModule { get; }
-        
+        PlayerControlClickModule    ClickModule { get; }
+
         bool PlayerControlsEnabled { get; }
     }
 }

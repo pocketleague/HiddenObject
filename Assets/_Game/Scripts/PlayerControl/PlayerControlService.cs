@@ -12,9 +12,10 @@ namespace Scripts.PlayerControl
 
         private PlayerControlConfig _config;
         
-        public PlayerControlDragModule     DragModule     { get; private set; }
-        public PlayerControlJoystickModule JoystickModule { get; private set; }
-        
+        public PlayerControlDragModule      DragModule     { get; private set; }
+        public PlayerControlJoystickModule  JoystickModule { get; private set; }
+        public PlayerControlClickModule     ClickModule     { get; private set; }
+
         public bool PlayerControlsEnabled { get; private set; }
 
         [Inject]
@@ -25,6 +26,7 @@ namespace Scripts.PlayerControl
 
             DragModule     = new PlayerControlDragModule( config );
             JoystickModule = new PlayerControlJoystickModule( config );
+            ClickModule = new PlayerControlClickModule(config);
 
             playerLoop.OnUpdateTick += CheckInput;
         }
@@ -41,6 +43,9 @@ namespace Scripts.PlayerControl
             
             if ( _config.useDrag )
                 DragModule.Tick( );
+
+            if ( _config.useClick )
+                ClickModule.Tick();
         }
 
         private void HandlePhysicalButtons()

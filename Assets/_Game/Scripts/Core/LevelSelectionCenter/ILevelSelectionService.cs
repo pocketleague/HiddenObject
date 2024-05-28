@@ -6,5 +6,7 @@ namespace Scripts.Core.LevelSelection
     {
         event Action OnLevelSelectionStarted;
         event Action OnLevelSelectionEnded;
+
+        void SelectLevel(int index);
     }
 }

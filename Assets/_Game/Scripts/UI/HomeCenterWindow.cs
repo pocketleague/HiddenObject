@@ -13,10 +13,13 @@ namespace Scripts.UI
 
         [Inject] private IHomeCenterService _homeCenterService;
         [Inject] private IStateManagerService _stateManagerService;
+
         private Window _targetWindow;
 
         [SerializeField]
         private Button _btnStartGameCenter;
+
+        public UnityEngine.Camera _cam;
 
         private void Awake()
         {
@@ -26,6 +29,14 @@ namespace Scripts.UI
             _homeCenterService.OnHomeCenterEnded    += Close;
 
             _btnStartGameCenter.onClick.AddListener(StartGameCenterClicked);
+
+
+        }
+
+        void OnCamSet(UnityEngine.Camera cam)
+        {
+            Debug.Log("camera set ho gaya");
+            _cam = cam;
         }
 
         private void OnDestroy()

@@ -16,5 +16,8 @@ namespace Scripts.PlayerControl
         [Header( "Drag" )]
         public bool  useDrag       = true;
         public float dragAmplitude = 1f;
+
+        [Header("Click")]
+        public bool useClick = true;
     }
 }

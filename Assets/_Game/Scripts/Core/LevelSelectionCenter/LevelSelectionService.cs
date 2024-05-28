@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace Scripts.Core.LevelSelection
 {
@@ -9,6 +10,8 @@ namespace Scripts.Core.LevelSelection
     {
         public event Action OnLevelSelectionStarted = delegate { };
         public event Action OnLevelSelectionEnded = delegate { };
+
+        [Inject] private IStateManagerService _stateManagerService;
 
         public void Begin()
         {
@@ -18,6 +21,11 @@ namespace Scripts.Core.LevelSelection
         public void End()
         {
             OnLevelSelectionEnded.Invoke();
+        }
+
+        public void SelectLevel(int index)
+        {
+            _stateManagerService.ChangeState(EState.GameplayCenter);
         }
     }
 }
