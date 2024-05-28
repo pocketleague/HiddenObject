@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Zenject;
 using GameplayCenter;
 using Scripts.Core;
+using Scripts.Timer;
 
 namespace Scripts.UI
 {
@@ -13,11 +14,13 @@ namespace Scripts.UI
     {
 
         [Inject] private IGameplayCenterService _gameplayService;
-        [Inject] private IStateManagerService _stateManager;
+        [Inject] private IStateManagerService   _stateManager;
+        [Inject] private ITimerService          _timerService;
+
 
         private Window _targetWindow;
 
-        [SerializeField] Button btnEnd;
+        [SerializeField] Button btnEnd, btnPenalty;
 
         private void Awake()
         {
@@ -27,6 +30,7 @@ namespace Scripts.UI
             _gameplayService.OnGamePlayEnded    += OnGamePlayEnded;
 
             btnEnd.onClick.AddListener(End);
+            btnPenalty.onClick.AddListener(Penalty);
         }
 
         private void OnDestroy()
@@ -48,6 +52,11 @@ namespace Scripts.UI
         void End()
         {
             _stateManager.ChangeState(EState.RewardCenter);
+        }
+
+        void Penalty()
+        {
+            _timerService.Penalty();
         }
     }
 }
