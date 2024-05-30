@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 
-namespace HiddenObject.LevelData
+namespace Scripts.Core.LevelSelection
 {
 	public enum ListItemType
 	{

@@ -58,7 +58,7 @@ namespace HOGM
 
         private void Start()
         {
-			TripleTapGames.Instance.Init();
+			//TripleTapGames.Instance.Init();
 		}
 
 
@@ -74,7 +74,7 @@ namespace HOGM
 
 			Debug.Log("stars:"+stars +" msec:"+msec +" savedStars:"+savedStars +" savedMsec:"+savedTimeMsec);
 
-			TripleTapGames.Instance.SetProgression(GameAnalyticsSDK.GAProgressionStatus.Complete, currentLevel,"","", stars);
+			//TripleTapGames.Instance.SetProgression(GameAnalyticsSDK.GAProgressionStatus.Complete, currentLevel,"","", stars);
 
 			if (savedStars < stars)
 			{

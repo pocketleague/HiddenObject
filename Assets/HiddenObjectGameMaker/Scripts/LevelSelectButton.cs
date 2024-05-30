@@ -117,7 +117,7 @@ namespace HOGM
 			gd.currentListItemType = listItemType;
 			gd.currentSearchType = searchType;
 
-			TripleTapGames.Instance.SetProgression(GameAnalyticsSDK.GAProgressionStatus.Start, level);
+			//TripleTapGames.Instance.SetProgression(GameAnalyticsSDK.GAProgressionStatus.Start, level);
 
 			SceneManager.LoadScene(gameSceneName);
 		}

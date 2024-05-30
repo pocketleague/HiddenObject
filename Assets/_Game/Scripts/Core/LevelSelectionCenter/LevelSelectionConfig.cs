@@ -7,6 +7,6 @@ namespace Scripts.Core.LevelSelection
     [CreateAssetMenu(fileName = "LevelSelectionConfig", menuName = "Configs/LevelSelectionConfig")]
     public class LevelSelectionConfig : ScriptableObject
     {
-       
+        public LevelConfig [] levelConfigs;
     }
 }

@@ -9,7 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490fdaedefda94c219e746436facc1ea, type: 3}
-  m_Name: SquishingInstaller
+  m_Script: {fileID: 11500000, guid: 89c6ee88b9b7a614caefeabcaeef37a4, type: 3}
+  m_Name: Level4
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 9131fe3831ee0434088f3e25bc7cb182, type: 2}
+  levelData:
+    listItemType: 0
+    searchType: 0
+    totalTime: 0
+    totalObjective: 0
+    levelPrefab: {fileID: 889724878813637288, guid: aa72995069a994f4e83a250f07f1c0f6, type: 3}

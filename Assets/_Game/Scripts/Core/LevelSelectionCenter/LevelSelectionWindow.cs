@@ -12,8 +12,9 @@ namespace Scripts.Core.LevelSelection
     public class LevelSelectionWindow : MonoBehaviour
     {
         [Inject] private ILevelSelectionService _levelSelectionService;
-        private Window _targetWindow;
+        [Inject] private LevelSelectionConfig _config;
 
+        private Window _targetWindow;
 
         [SerializeField] private Button _btnStartGameCenter;
         [SerializeField] private Transform contentParent;
@@ -49,7 +50,7 @@ namespace Scripts.Core.LevelSelection
 
         void PopulateGrid()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < _config.levelConfigs.Length; i++)
             {
                 PrefabGridButtonView newItem = Instantiate(pf_grid, contentParent);
                 newItem.Setup(i, _levelSelectionService);

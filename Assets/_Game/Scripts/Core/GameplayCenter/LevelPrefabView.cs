@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HiddenObject.LevelData;
+using Scripts.Core.LevelSelection;
 
 
 public class LevelPrefabView : MonoBehaviour

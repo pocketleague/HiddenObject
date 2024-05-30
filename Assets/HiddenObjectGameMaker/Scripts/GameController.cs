@@ -247,7 +247,7 @@ namespace HOGM
 
 		public void OnClickRetry ()
 		{
-			TripleTapGames.Instance.SetProgression(GameAnalyticsSDK.GAProgressionStatus.Start, GameData.Instance.currentLevel);
+			//TripleTapGames.Instance.SetProgression(GameAnalyticsSDK.GAProgressionStatus.Start, GameData.Instance.currentLevel);
 			SoundManager.Instance.PlaySEButton1();
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		}

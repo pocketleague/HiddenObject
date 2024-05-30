@@ -83,7 +83,7 @@ namespace HOGM
 				if (limitedTimeSec <= elapsedTime)
 				{
 					Debug.Log("End --- elapsed time:"+elapsedTime.ToString("F3"));
-					TripleTapGames.Instance.SetProgression(GameAnalyticsSDK.GAProgressionStatus.Fail, GameData.Instance.currentLevel);
+//					TripleTapGames.Instance.SetProgression(GameAnalyticsSDK.GAProgressionStatus.Fail, GameData.Instance.currentLevel);
 					Ended.Invoke();
 					isOn = false;
 				}

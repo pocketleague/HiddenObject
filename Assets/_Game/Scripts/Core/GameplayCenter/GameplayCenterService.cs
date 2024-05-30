@@ -7,6 +7,7 @@ using System;
 using Scripts.Core;
 using Scripts.PlayerControl;
 using Scripts.Camera;
+using Scripts.Core.LevelSelection;
 
 namespace GameplayCenter
 {
@@ -16,13 +17,15 @@ namespace GameplayCenter
         public event Action OnGamePlayEnded = delegate { };
 
         private GameplayCenterConfig _config;
+        private ILevelSelectionService _levelSelectionService;
 
         private Camera mainCam;
 
         [Inject]
-        private void Construct(GameplayCenterConfig config, IPlayerControlService playerControlService, ICameraService cameraService)
+        private void Construct(GameplayCenterConfig config, IPlayerControlService playerControlService, ICameraService cameraService, ILevelSelectionService levelSelectionService)
         {
-            _config             = config;
+            _config                 = config;
+            _levelSelectionService  = levelSelectionService;
 
             playerControlService.ClickModule.OnMouseDown += OnMouseDown;
 
@@ -32,6 +35,11 @@ namespace GameplayCenter
         public void Begin()
         {
             OnGamePlayStarted.Invoke();
+
+            // Spawn level
+            GameObject.Instantiate(_levelSelectionService.CurrentLevelConfig.levelData.levelPrefab);
+
+
         }
 
         public void End()
