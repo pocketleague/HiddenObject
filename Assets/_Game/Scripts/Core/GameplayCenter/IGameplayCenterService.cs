@@ -9,5 +9,6 @@ namespace GameplayCenter
     {
         event Action OnGamePlayStarted;
         event Action OnGamePlayEnded;
+        event Action<LevelPrefabView> OnLevelSpawned;
     }
 }

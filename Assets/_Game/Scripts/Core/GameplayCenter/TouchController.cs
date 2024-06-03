@@ -53,7 +53,6 @@ public class TouchController : MonoBehaviour
 
 	bool SelectClickedObjectAndCallAction(Transform colliders)
 	{
-
 		if(colliders.gameObject.layer == 6)
         {
 			ClickableObject tobj = colliders.gameObject.GetComponent<ClickableObject>();

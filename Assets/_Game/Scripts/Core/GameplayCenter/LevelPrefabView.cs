@@ -2,19 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Scripts.Core.LevelSelection;
-
+using System;
 
 public class LevelPrefabView : MonoBehaviour
 {
     public List<LevelItemData> levelItemDatas;
     [SerializeField] private List<ItemStateData> itemStateDatas = new List<ItemStateData>();
     
-    public void OnEnable()
-    {
-        OnSetUp();
-    }
+   
 
-    void OnSetUp()
+    public void OnSetUp(Action callBack)
     {
         for(int i =0; i< levelItemDatas.Count; i++ )
         {
@@ -30,6 +27,8 @@ public class LevelPrefabView : MonoBehaviour
                 itemStateDatas.Add(itemStateData);
             }
         }
+
+        callBack.Invoke();
     }
 
     public void FoundObject(ItemStateData itemStateData)
