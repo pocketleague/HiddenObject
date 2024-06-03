@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Zenject;
 using RewardCenter;
 using Scripts.Core;
+using Scripts.Core.LevelSelection;
 
 namespace Scripts.UI
 {
@@ -12,7 +13,7 @@ namespace Scripts.UI
     {
         [Inject] private IRewardCenterService _rewardCenterService;
         [Inject] private IStateManagerService _stateManager;
-
+        [Inject] private ILevelSelectionService _levelSelectionService;
         private Window _targetWindow;
 
         [SerializeField] Button btnEnd;
@@ -45,7 +46,10 @@ namespace Scripts.UI
 
         void End()
         {
-            _stateManager.ChangeState(EState.HomeCenter);
+            int i = _levelSelectionService.currentLevel;
+            i++;
+            _levelSelectionService.SelectLevel(i);
+            _stateManager.ChangeState(EState.GameplayCenter);
         }
     }
 }

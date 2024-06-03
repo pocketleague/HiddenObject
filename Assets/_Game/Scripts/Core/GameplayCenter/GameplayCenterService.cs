@@ -63,6 +63,9 @@ namespace GameplayCenter
 
         public void End()
         {
+            if(CurrentLevelPrefabView != null)
+            UnityEngine.Object.Destroy(CurrentLevelPrefabView.gameObject);
+          //  CurrentLevelPrefabView
             OnGamePlayEnded.Invoke();
             _playerControlService.ClickModule.OnMouseDown -= OnMouseDown;
 

@@ -8,7 +8,7 @@ namespace Scripts.Core.LevelSelection
         event Action OnLevelSelectionEnded;
 
         void SelectLevel(int index);
-
+        int currentLevel { get; }
         LevelConfig CurrentLevelConfig { get; }
 
     }

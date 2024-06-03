@@ -48,9 +48,8 @@ namespace Scripts.UI
         void Open()
         {
             _targetWindow.Open();
+            Invoke("StartGameCenterClicked", 1f);
 
-          
-           
         }
 
         void Close()

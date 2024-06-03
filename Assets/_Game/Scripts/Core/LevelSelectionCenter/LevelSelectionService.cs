@@ -14,6 +14,7 @@ namespace Scripts.Core.LevelSelection
         [Inject] private IStateManagerService _stateManagerService;
 
         private LevelSelectionConfig _config;
+        public  int currentLevel { get; private set; }
 
         public LevelConfig CurrentLevelConfig { get; private set; }
 
@@ -35,7 +36,13 @@ namespace Scripts.Core.LevelSelection
 
         public void SelectLevel(int index)
         {
+            if(index >= _config.levelConfigs.Length)
+            {
+                index = 0;
+            }
+
             CurrentLevelConfig = GetLevelAtIndex(index);
+            currentLevel = index;
             _stateManagerService.ChangeState(EState.GameplayCenter);
         }
 
