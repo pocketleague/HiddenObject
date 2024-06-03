@@ -12,17 +12,20 @@ namespace GameplayCenter
         [SerializeField] private TextMeshProUGUI txt_count;
 
         public int counter;
+        public string itemID;
 
-        public void Setup(int count)
+        public void Setup(int count, string _itemId)
         {
             counter = count;
-            txt_count.text = "" + count;
+            txt_count.text = "" + counter;
 
-
+            itemID = _itemId;
         }
 
         public void ReduceCount()
         {
+            counter--;
+            txt_count.text = "" + counter;
 
         }
     }

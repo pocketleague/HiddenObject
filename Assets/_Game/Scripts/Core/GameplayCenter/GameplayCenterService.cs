@@ -31,12 +31,12 @@ namespace GameplayCenter
         private DiContainer _diContainer;
 
         [Inject]
-        private void Construct(GameplayCenterConfig config, IPlayerControlService playerControlService, ICameraService cameraService, ILevelSelectionService levelSelectionService)
+        private void Construct(DiContainer diContainer, GameplayCenterConfig config, IPlayerControlService playerControlService, ICameraService cameraService, ILevelSelectionService levelSelectionService)
         {
             _config                 = config;
             _levelSelectionService  = levelSelectionService;
             _playerControlService   = playerControlService;
-
+            _diContainer = diContainer;
             mainCam = cameraService.CameraView.cameraObject;
 
             SetLayerMask("ClickableObject");

@@ -28,6 +28,8 @@ namespace Scripts.UI
         [SerializeField] Transform content;
 
         List<ObjectUiItemView> itemList;
+        //List<ObjectUiItemView> itemList;
+
 
         [Inject]
         private void Construct(IGameplayCenterService service)
@@ -70,8 +72,8 @@ namespace Scripts.UI
             foreach (var itemData in view.levelItemDatas)
             {
                 // Instantiate ObjectUiItemView
-                ObjectUiItemView itemView = Instantiate(itemView_prefab, content);
-                itemList.Add(itemView);
+                ObjectUiItemView UiItemView = Instantiate(itemView_prefab, content);
+                itemList.Add(UiItemView);
 
                 // Find total count
                 int totalCount = 0;
@@ -80,7 +82,7 @@ namespace Scripts.UI
                     totalCount++;
                 }
 
-                itemView.Setup(totalCount);
+                UiItemView.Setup(totalCount, itemData.id);
             }
         }
 
@@ -91,7 +93,20 @@ namespace Scripts.UI
 
         void OnObjectFound(ItemStateData itemStateData)
         {
+            foreach (var uiItemView in itemList)
+            {
+                if (uiItemView.itemID == itemStateData.itemID)
+                {
+                    uiItemView.ReduceCount();
 
+                    if (uiItemView.counter <= 0)
+                    {
+                        itemList.Remove(uiItemView);
+                        Destroy(uiItemView.gameObject);
+                        break;
+                    }
+                }
+            }
         }
 
         void End()
