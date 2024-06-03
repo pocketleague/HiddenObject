@@ -23,7 +23,7 @@ namespace Scripts.Core.LevelSelection
 
             _index = index;
 
-            txt_itemNo.text = "Item " + (index + 1);
+            txt_itemNo.text = ""+ (index + 1);
             _button.onClick.AddListener(SelectLevel);
         }
 

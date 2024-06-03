@@ -30,7 +30,7 @@ namespace Scripts.UI
 
             _btnStartGameCenter.onClick.AddListener(StartGameCenterClicked);
 
-
+            Invoke("StartGameCenterClicked", 1f);
         }
 
         void OnCamSet(UnityEngine.Camera cam)
@@ -48,6 +48,9 @@ namespace Scripts.UI
         void Open()
         {
             _targetWindow.Open();
+
+          
+           
         }
 
         void Close()

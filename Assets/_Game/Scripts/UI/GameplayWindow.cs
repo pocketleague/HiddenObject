@@ -82,7 +82,7 @@ namespace Scripts.UI
                     totalCount++;
                 }
 
-                UiItemView.Setup(totalCount, itemData.id);
+                UiItemView.Setup(totalCount, itemData.id, itemData.itemSprite);
             }
         }
 
@@ -106,6 +106,11 @@ namespace Scripts.UI
                         break;
                     }
                 }
+            }
+
+            if(itemList.Count == 0)
+            {
+                End();
             }
         }
 

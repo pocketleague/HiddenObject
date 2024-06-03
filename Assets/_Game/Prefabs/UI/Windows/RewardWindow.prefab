@@ -113,8 +113,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -487}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchoredPosition: {x: 0.000030517, y: -115.26}
+  m_SizeDelta: {x: 1080, y: 230.5284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2269800574496659732
 CanvasRenderer:
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reward
+  m_text: Level Completed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 337d3cac32fca384491af59b4629302f, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 4e0253f795134fd4e8b20f4d494912d4, type: 2}
@@ -247,8 +247,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -538.092}
+  m_SizeDelta: {x: 0, y: -1076.184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &635197344271856473
 CanvasRenderer:
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: End
+  m_text: 'Tap to continue '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9767a8ed9c618c3469d7a5cc0340cfc7, type: 2}
   m_sharedMaterial: {fileID: 6952757597103231394, guid: 9767a8ed9c618c3469d7a5cc0340cfc7, type: 2}
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 59.35
+  m_fontSize: 120
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -383,8 +383,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 657}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: 0.000045776, y: 675.0001}
+  m_SizeDelta: {x: 1080, y: 1350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7656061509532410567
 CanvasRenderer:
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.28304815, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.28304815, g: 1, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

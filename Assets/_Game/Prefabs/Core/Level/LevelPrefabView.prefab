@@ -3384,7 +3384,7 @@ MonoBehaviour:
     - {fileID: 6652996193735931042}
     - {fileID: 619869515149478961}
     - {fileID: 137468273483162857}
-    itemSprite: {fileID: 0}
+    itemSprite: {fileID: 21300000, guid: a25ad5d8c8571cc45a54666e80af1fdb, type: 3}
   - id: Ball
     item:
     - {fileID: 2351457305524390651}
@@ -3398,14 +3398,14 @@ MonoBehaviour:
     - {fileID: 8902638531049635171}
     - {fileID: 6428273403002747913}
     - {fileID: 3412099862087849158}
-    itemSprite: {fileID: 0}
+    itemSprite: {fileID: 21300000, guid: a5e081e072d018949873c9e8f3b0c0af, type: 3}
   - id: Cylinder
     item:
     - {fileID: 8641520314811723232}
     - {fileID: 8779138158295591362}
     - {fileID: 7767699907888237278}
     - {fileID: 4787341350851883068}
-    itemSprite: {fileID: 0}
+    itemSprite: {fileID: 21300000, guid: ece1c828517041442ad52899e79859a3, type: 3}
   itemStateDatas: []
 --- !u!1 &6480137418293774600
 GameObject:
@@ -6351,7 +6351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7945993405416530301, guid: ab0eab2406e6b415a9cac856d375d31b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.797
+      value: 3.047
       objectReference: {fileID: 0}
     - target: {fileID: 7945993405416530301, guid: ab0eab2406e6b415a9cac856d375d31b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6359,7 +6359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7945993405416530301, guid: ab0eab2406e6b415a9cac856d375d31b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.547
+      value: 0.183
       objectReference: {fileID: 0}
     - target: {fileID: 7945993405416530301, guid: ab0eab2406e6b415a9cac856d375d31b, type: 3}
       propertyPath: m_LocalRotation.w
