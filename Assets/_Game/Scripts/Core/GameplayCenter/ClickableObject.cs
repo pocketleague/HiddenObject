@@ -9,7 +9,7 @@ public class ClickableObject : MonoBehaviour
 	public void Setup(TargetObjectPrefabView targetObjectPrefabView)
     {
 		_targetObjectPrefabView = targetObjectPrefabView;
-		gameObject.transform.GetChild(0).gameObject.layer = 6;
+		gameObject.layer = 6;
 	}
 
 	public void OnClick()

@@ -19,6 +19,8 @@ namespace GameplayCenter
         private GameplayCenterConfig _config;
         private ILevelSelectionService _levelSelectionService;
 
+        public LevelPrefabView CurrentLevelPrefabView;
+
         private Camera mainCam;
 
         [Inject]

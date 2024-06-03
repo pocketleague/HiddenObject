@@ -9,7 +9,6 @@ public class LevelPrefabView : MonoBehaviour
     public List<LevelItemData> levelItemDatas;
     [SerializeField] private List<ItemStateData> itemStateDatas = new List<ItemStateData>();
     
-
     public void OnEnable()
     {
         OnSetUp();

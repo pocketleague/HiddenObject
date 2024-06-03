@@ -14,18 +14,53 @@ public class TouchController : MonoBehaviour
 	//}
 
 
-	public class UITouchController : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
-	{
+	//public class UITouchController : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
+	//{
 		Camera targetCamera;
 		bool isDragging = false;
+		public LayerMask layer;
 
 		void Start()
 		{
 			targetCamera = Camera.main;
 		}
 
+        private void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+				bool isTargetClicked = false;
+				Debug.Log("mouse click");
 
-		public void OnPointerClick(PointerEventData eventData)
+				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+				RaycastHit hit;
+				if (Physics.Raycast(ray, out hit, Mathf.Infinity, layer))
+				{
+					Debug.Log(hit.transform.gameObject.layer);
+					Debug.Log("hit");
+					Vector3 p = hit.point;
+					// p.z = 10;
+
+					if (hit.collider.gameObject.layer == 6)
+					{
+
+						isTargetClicked = SelectClickedObjectAndCallAction(hit.transform);
+						//if (isTargetClicked)
+						//{
+						//	Instantiate(ps, p, Quaternion.identity);
+						//}
+					}
+
+					if (!isTargetClicked)
+					{
+						// misclick
+						//PointerMisclick.Invoke(hit.point);
+					}
+				}
+			}
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
 		{
 			if (!isDragging)
 			{
@@ -101,8 +136,5 @@ public class TouchController : MonoBehaviour
 		{
 			isDragging = false;
 		}
-
-
-	}
-
+	//}
 }
