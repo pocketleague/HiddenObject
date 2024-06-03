@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using Zenject;
 using GameplayCenter;
 using Scripts.Core;
+using Scripts.Core.LevelSelection;
 using Scripts.Timer;
 
 namespace Scripts.UI
@@ -37,8 +38,10 @@ namespace Scripts.UI
             _gameplayService.OnGamePlayEnded    += OnGamePlayEnded;
 
             _gameplayService.OnLevelSpawned     += SpawnItemsUI;
+            _gameplayService.OnObjectFound      += OnObjectFound;
 
-            
+
+
             btnEnd.onClick.AddListener(End);
             btnPenalty.onClick.AddListener(Penalty);
 
@@ -84,6 +87,11 @@ namespace Scripts.UI
         private void OnGamePlayEnded()
         {
             _targetWindow.Close();
+        }
+
+        void OnObjectFound(ItemStateData itemStateData)
+        {
+
         }
 
         void End()

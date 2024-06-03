@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
+using Scripts.Core.LevelSelection;
 
 namespace GameplayCenter
 {
@@ -10,5 +8,8 @@ namespace GameplayCenter
         event Action OnGamePlayStarted;
         event Action OnGamePlayEnded;
         event Action<LevelPrefabView> OnLevelSpawned;
+        event Action<ItemStateData> OnObjectFound;
+
+        void FoundObject(ItemStateData itemStateData);
     }
 }

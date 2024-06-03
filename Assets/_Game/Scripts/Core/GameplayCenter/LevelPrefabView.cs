@@ -8,8 +8,6 @@ public class LevelPrefabView : MonoBehaviour
 {
     public List<LevelItemData> levelItemDatas;
     [SerializeField] private List<ItemStateData> itemStateDatas = new List<ItemStateData>();
-    
-   
 
     public void OnSetUp(Action callBack)
     {
@@ -38,7 +36,6 @@ public class LevelPrefabView : MonoBehaviour
             itemStateDatas.Remove(itemStateData);
         }
     }
-
 
     private void OnDisable()
     {

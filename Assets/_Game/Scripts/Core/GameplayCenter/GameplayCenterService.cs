@@ -16,6 +16,7 @@ namespace GameplayCenter
         public event Action OnGamePlayStarted = delegate { };
         public event Action OnGamePlayEnded = delegate { };
         public event Action<LevelPrefabView> OnLevelSpawned = delegate { };
+        public event Action<ItemStateData> OnObjectFound = delegate { };
 
         private GameplayCenterConfig _config;
         private ILevelSelectionService _levelSelectionService;
@@ -26,6 +27,8 @@ namespace GameplayCenter
         private Camera mainCam;
 
         private LayerMask targetLayer;
+
+        private DiContainer _diContainer;
 
         [Inject]
         private void Construct(GameplayCenterConfig config, IPlayerControlService playerControlService, ICameraService cameraService, ILevelSelectionService levelSelectionService)
@@ -50,7 +53,7 @@ namespace GameplayCenter
         void SpawnLevelPrefab()
         {
             // Spawn level
-            CurrentLevelPrefabView = GameObject.Instantiate(_levelSelectionService.CurrentLevelConfig.levelData.levelPrefabView);
+            CurrentLevelPrefabView = _diContainer.InstantiatePrefab(_levelSelectionService.CurrentLevelConfig.levelData.levelPrefabView).GetComponent<LevelPrefabView>();
             Debug.Log("On Level spawned");
 
             CurrentLevelPrefabView.OnSetUp(() => {
@@ -118,8 +121,6 @@ namespace GameplayCenter
             return false;
         }
 
-
-
         Vector3 GetWorldPositionOnPlane(Vector3 screenPosition, float z)
         {
             Ray ray = mainCam.ScreenPointToRay(screenPosition);
@@ -137,5 +138,12 @@ namespace GameplayCenter
         {
             targetLayer = LayerMask.GetMask(layerNames);
         }
+
+        public void FoundObject(ItemStateData itemStateData)
+        {
+            CurrentLevelPrefabView.FoundObject(itemStateData);
+            OnObjectFound.Invoke(itemStateData);
+        }
+
     }
 }

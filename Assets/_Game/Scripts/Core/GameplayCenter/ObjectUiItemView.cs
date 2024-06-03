@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Scripts.Core.LevelSelection;
 
 namespace GameplayCenter
 {
@@ -16,6 +17,13 @@ namespace GameplayCenter
         {
             counter = count;
             txt_count.text = "" + count;
+
+
+        }
+
+        public void ReduceCount()
+        {
+
         }
     }
 }
