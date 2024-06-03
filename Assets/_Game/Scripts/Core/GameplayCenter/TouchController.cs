@@ -7,134 +7,67 @@ using UnityEngine.EventSystems;
 
 public class TouchController : MonoBehaviour
 {
+	Camera targetCamera;
+	bool isDragging = false;
+	public LayerMask layer;
 
-	//[System.Serializable]
-	//public class Vector3Event : UnityEvent<Vector3>
-	//{
-	//}
+	void Start()
+	{
+		targetCamera = Camera.main;
+	}
 
-
-	//public class UITouchController : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
-	//{
-		Camera targetCamera;
-		bool isDragging = false;
-		public LayerMask layer;
-
-		void Start()
-		{
-			targetCamera = Camera.main;
-		}
-
-        private void Update()
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-				bool isTargetClicked = false;
-				Debug.Log("mouse click");
+			bool isTargetClicked = false;
+			Debug.Log("mouse click");
 
-				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-				RaycastHit hit;
-				if (Physics.Raycast(ray, out hit, Mathf.Infinity, layer))
-				{
-					Debug.Log(hit.transform.gameObject.layer);
-					Debug.Log("hit");
-					Vector3 p = hit.point;
-					// p.z = 10;
-
-					if (hit.collider.gameObject.layer == 6)
-					{
-
-						isTargetClicked = SelectClickedObjectAndCallAction(hit.transform);
-						//if (isTargetClicked)
-						//{
-						//	Instantiate(ps, p, Quaternion.identity);
-						//}
-					}
-
-					if (!isTargetClicked)
-					{
-						// misclick
-						//PointerMisclick.Invoke(hit.point);
-					}
-				}
-			}
-        }
-
-        public void OnPointerClick(PointerEventData eventData)
-		{
-			if (!isDragging)
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit hit;
+			if (Physics.Raycast(ray, out hit, Mathf.Infinity, layer))
 			{
-				bool isTargetClicked = false;
+				Debug.Log(hit.transform.gameObject.layer);
+				Debug.Log("hit");
+				Vector3 p = hit.point;
+				// p.z = 10;
 
-				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-				RaycastHit hit;
-				if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+				if (hit.collider.gameObject.layer == 6)
 				{
-					Debug.Log(hit.transform.gameObject.layer);
-					Debug.Log("hit");
-					Vector3 p = hit.point;
-					// p.z = 10;
 
-					if (hit.collider.gameObject.layer == 6)
-					{
-
-						isTargetClicked = SelectClickedObjectAndCallAction(hit.transform);
-						//if (isTargetClicked)
-						//{
-						//	Instantiate(ps, p, Quaternion.identity);
-						//}
-					}
-
-					if (!isTargetClicked)
-					{
-						// misclick
-						//PointerMisclick.Invoke(hit.point);
-					}
+					isTargetClicked = SelectClickedObjectAndCallAction(hit.transform);
+					//if (isTargetClicked)
+					//{
+					//	Instantiate(ps, p, Quaternion.identity);
+					//}
 				}
-				
-			}
-		}
 
-
-		bool SelectClickedObjectAndCallAction(Transform colliders)
-		{
-
-			if(colliders.gameObject.layer == 6)
-            {
-				ClickableObject tobj = colliders.gameObject.GetComponent<ClickableObject>();
-
-				if (tobj != null )
+				if (!isTargetClicked)
 				{
-					tobj.OnClick();
-					return true;
-				}
-				else
-				{
-					return false;
+					// misclick
+					//PointerMisclick.Invoke(hit.point);
 				}
 			}
-
-			return false;
 		}
+    }
 
+	bool SelectClickedObjectAndCallAction(Transform colliders)
+	{
 
+		if(colliders.gameObject.layer == 6)
+        {
+			ClickableObject tobj = colliders.gameObject.GetComponent<ClickableObject>();
 
-
-		public void OnBeginDrag(PointerEventData eventData)
-		{
-			isDragging = true;
+			if (tobj != null )
+			{
+				tobj.OnClick();
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
-
-
-		public void OnDrag(PointerEventData eventData)
-		{
-			isDragging = false;
-		}
-
-
-		public void OnEndDrag(PointerEventData eventData)
-		{
-			isDragging = false;
-		}
-	//}
+		return false;
+	}
 }

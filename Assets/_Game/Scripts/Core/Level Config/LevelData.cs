@@ -26,7 +26,7 @@ namespace Scripts.Core.LevelSelection
 		public SearchType searchType;
 		public float totalTime;
 		public int totalObjective;
-		public GameObject levelPrefab;
+		public LevelPrefabView levelPrefabView;
 
 	}
 

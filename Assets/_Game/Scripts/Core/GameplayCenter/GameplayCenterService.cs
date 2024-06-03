@@ -39,8 +39,8 @@ namespace GameplayCenter
             OnGamePlayStarted.Invoke();
 
             // Spawn level
-            GameObject.Instantiate(_levelSelectionService.CurrentLevelConfig.levelData.levelPrefab);
-
+            CurrentLevelPrefabView = GameObject.Instantiate(_levelSelectionService.CurrentLevelConfig.levelData.levelPrefabView);
+            Debug.Log("On Level spawned");
 
         }
 
