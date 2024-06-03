@@ -68,6 +68,8 @@ namespace Scripts.UI
             {
                 Destroy(item.gameObject);
             }
+            itemList.Clear();
+
             // Find Items to spawn
             foreach (var itemData in view.levelItemDatas)
             {
