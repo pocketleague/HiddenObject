@@ -27,7 +27,7 @@ namespace Scripts.Timer
             gameplayCenterService.OnGamePlayStarted += Show;
             gameplayCenterService.OnGamePlayEnded += Close;
 
-            _timerService.OnTimerChanged += OnTimerChanged;
+            _timerService.OnTimerChanged += DisplayTime;
         }
 
         void Show()
@@ -40,9 +40,12 @@ namespace Scripts.Timer
             _window.Close();
         }
 
-        void OnTimerChanged(float time)
+        void DisplayTime(float timeToDisplay)
         {
-            txt_timer.text = "" + time;
+            float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+            float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+            txt_timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
     }
 }

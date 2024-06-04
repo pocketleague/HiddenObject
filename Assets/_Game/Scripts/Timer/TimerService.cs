@@ -65,7 +65,7 @@ namespace Scripts.Timer
 
         void StartTimer()
         {
-            timeLeft = 30;
+            timeLeft = 90;
             OnTimerChanged.Invoke(timeLeft);
 
             timerOn = true;
@@ -75,5 +75,7 @@ namespace Scripts.Timer
         {
             timerOn = false;
         }
+
+       
     }
 }
