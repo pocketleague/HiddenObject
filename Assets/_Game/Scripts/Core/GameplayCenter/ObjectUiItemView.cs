@@ -25,6 +25,9 @@ namespace GameplayCenter
 
         public void ReduceCount()
         {
+            object_Img.gameObject.transform.localScale = Vector3.one;
+            LeanTween.scale(object_Img.gameObject,new Vector3(0.2f,0.2f,0.2f),0.5f).setEasePunch();
+
             counter--;
             txt_count.text = "" + counter;
 
