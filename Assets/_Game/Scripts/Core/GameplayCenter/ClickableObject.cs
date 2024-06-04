@@ -12,9 +12,9 @@ public class ClickableObject : MonoBehaviour
 		gameObject.layer = 6;
 	}
 
-	public void OnClick()
+	public void OnClick(Vector3 hitPoint)
 	{
-		_targetObjectPrefabView.FoundObject();
+		_targetObjectPrefabView.FoundObject(hitPoint);
 	}
 
 

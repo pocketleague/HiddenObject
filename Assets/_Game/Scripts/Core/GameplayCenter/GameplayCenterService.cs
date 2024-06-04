@@ -21,6 +21,7 @@ namespace GameplayCenter
         private GameplayCenterConfig _config;
         private ILevelSelectionService _levelSelectionService;
         private IPlayerControlService _playerControlService;
+        private ICameraService _cameraService;
 
         public LevelPrefabView CurrentLevelPrefabView;
 
@@ -29,6 +30,7 @@ namespace GameplayCenter
         private LayerMask targetLayer;
 
         private DiContainer _diContainer;
+        private Vector3 _hitPoint;
 
         [Inject]
         private void Construct(DiContainer diContainer, GameplayCenterConfig config, IPlayerControlService playerControlService, ICameraService cameraService, ILevelSelectionService levelSelectionService)
@@ -36,6 +38,8 @@ namespace GameplayCenter
             _config                 = config;
             _levelSelectionService  = levelSelectionService;
             _playerControlService   = playerControlService;
+            _cameraService = cameraService;
+
             _diContainer = diContainer;
             mainCam = cameraService.CameraView.cameraObject;
 
@@ -52,6 +56,11 @@ namespace GameplayCenter
 
         void SpawnLevelPrefab()
         {
+            _cameraService.CameraView.completedParticle.SetActive(false);
+
+            if (CurrentLevelPrefabView != null)
+                UnityEngine.Object.Destroy(CurrentLevelPrefabView.gameObject);
+
             // Spawn level
             CurrentLevelPrefabView = _diContainer.InstantiatePrefab(_levelSelectionService.CurrentLevelConfig.levelData.levelPrefabView).GetComponent<LevelPrefabView>();
             Debug.Log("On Level spawned");
@@ -63,8 +72,9 @@ namespace GameplayCenter
 
         public void End()
         {
-            if(CurrentLevelPrefabView != null)
-            UnityEngine.Object.Destroy(CurrentLevelPrefabView.gameObject);
+
+            _cameraService.CameraView.completedParticle.SetActive(true);
+
           //  CurrentLevelPrefabView
             OnGamePlayEnded.Invoke();
             _playerControlService.ClickModule.OnMouseDown -= OnMouseDown;
@@ -85,7 +95,7 @@ namespace GameplayCenter
             {
                 Debug.Log(hit.transform.gameObject.layer);
                 Debug.Log("hit");
-                Vector3 p = hit.point;
+                _hitPoint = hit.point;
                 // p.z = 10;
 
                 if (hit.collider.gameObject.layer == 6)
@@ -113,7 +123,7 @@ namespace GameplayCenter
 
                 if (tobj != null)
                 {
-                    tobj.OnClick();
+                    tobj.OnClick(_hitPoint);
                     return true;
                 }
                 else

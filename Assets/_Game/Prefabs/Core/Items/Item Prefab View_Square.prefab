@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemHolder: {fileID: 6232269179088338435}
   clickableObject: {fileID: 7478363111794245294}
+  clickParticle: {fileID: 4293154341308057714, guid: 6436fdb4f7471284ba9819116c3889e6, type: 3}
 --- !u!1 &6232269179088338435
 GameObject:
   m_ObjectHideFlags: 0

@@ -199,3 +199,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemHolder: {fileID: 2726158822876530730}
   clickableObject: {fileID: 3518425788478805543}
+  clickParticle: {fileID: 4293154341308057714, guid: 6436fdb4f7471284ba9819116c3889e6, type: 3}

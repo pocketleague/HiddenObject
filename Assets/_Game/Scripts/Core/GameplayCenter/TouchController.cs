@@ -59,7 +59,7 @@ public class TouchController : MonoBehaviour
 
 			if (tobj != null )
 			{
-				tobj.OnClick();
+				//tobj.OnClick();
 				return true;
 			}
 			else

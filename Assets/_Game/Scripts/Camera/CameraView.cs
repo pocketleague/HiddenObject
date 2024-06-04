@@ -12,6 +12,7 @@ namespace Scripts.Camera
         public Transform distanceTransform;
 
         public UnityEngine.Camera cameraObject;
+        public GameObject completedParticle;
 
         private void Start()
         {
