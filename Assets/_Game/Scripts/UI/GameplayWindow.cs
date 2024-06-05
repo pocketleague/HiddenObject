@@ -27,7 +27,7 @@ namespace Scripts.UI
 
         [SerializeField] Transform content;
 
-        List<ObjectUiItemView> itemList;
+     [SerializeField]   List<ObjectUiItemView> itemList;
         //List<ObjectUiItemView> itemList;
         public int activeObjectIndex;
 
@@ -94,20 +94,23 @@ namespace Scripts.UI
 
             for (int j = 0; j < 3; j++)
             {
-                EnableTargetObjectUI(j);
+                GameObject targetobject = itemList[j].gameObject;
+                targetobject.transform.SetSiblingIndex(j);
+               // itemList[0].SetChildIndex(j);
+                targetobject.gameObject.SetActive(true);
             }
         }
 
         void EnableTargetObjectUI(int childPos)
         {
-            //if (activeObjectIndex < itemList.Count)
-            //{
-                GameObject targetobject = itemList[0].gameObject;
+            if (2 < itemList.Count)
+            {
+                GameObject targetobject = itemList[2].gameObject;
                 targetobject.transform.SetSiblingIndex(childPos);
-                itemList[activeObjectIndex].SetChildIndex(childPos);
+                itemList[2].SetChildIndex(childPos);
                 targetobject.gameObject.SetActive(true);
-                activeObjectIndex++;
-           // }
+                // activeObjectIndex++;
+            }
         }
 
         private void OnGamePlayEnded()
@@ -135,7 +138,7 @@ namespace Scripts.UI
 
             if(itemList.Count == 0)
             {
-                End();
+                Invoke("End", 1f);
             }
         }
 
