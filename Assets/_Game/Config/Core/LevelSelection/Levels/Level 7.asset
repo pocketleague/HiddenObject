@@ -17,4 +17,4 @@ MonoBehaviour:
     searchType: 0
     totalTime: 0
     totalObjective: 0
-    levelPrefabView: {fileID: 1306764588925968198, guid: 2e03acbb46a9e4e3188d5fbf6128beab, type: 3}
+    levelPrefabView: {fileID: 1306764588925968198, guid: 234a2f978b74144b585c4399aaa95368, type: 3}
