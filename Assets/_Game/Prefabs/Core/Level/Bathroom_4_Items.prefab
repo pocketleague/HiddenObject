@@ -865,6 +865,7 @@ MonoBehaviour:
     - {fileID: 2393688827905661249}
     itemSprite: {fileID: 21300000, guid: 7cf3173d620b2476c8a740d658212ed7, type: 3}
   itemStateDatas: []
+  activeObjectIndex: 0
 --- !u!1 &7170694892068759535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,7 +1040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7448128377076297080
 RectTransform:
   m_ObjectHideFlags: 0
