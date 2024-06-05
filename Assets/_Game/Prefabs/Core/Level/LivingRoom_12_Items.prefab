@@ -3140,7 +3140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6377415515615969304}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
@@ -3151,7 +3151,7 @@ Transform:
   - {fileID: 7074341726190210775}
   - {fileID: 7445116817955026483}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1306764588925968198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3168,11 +3168,11 @@ MonoBehaviour:
   - id: Apple
     item:
     - {fileID: 4529232321607252777}
-    itemSprite: {fileID: 21300000, guid: a25ad5d8c8571cc45a54666e80af1fdb, type: 3}
+    itemSprite: {fileID: 21300000, guid: 95a2aba1411ab4b7bb534cb40fc19ff8, type: 3}
   - id: Banana
     item:
     - {fileID: 3625319701292490031}
-    itemSprite: {fileID: 21300000, guid: a5e081e072d018949873c9e8f3b0c0af, type: 3}
+    itemSprite: {fileID: 21300000, guid: 44d03e7f61f164503a5d9d5c45e35d2a, type: 3}
   - id: EggPlant
     item:
     - {fileID: 1970059110220209471}
@@ -3184,7 +3184,7 @@ MonoBehaviour:
   - id: Basketball
     item:
     - {fileID: 4727609362341716333}
-    itemSprite: {fileID: 21300000, guid: ece1c828517041442ad52899e79859a3, type: 3}
+    itemSprite: {fileID: 21300000, guid: 2e070ac2f81ed4c739ec37d6642a1e56, type: 3}
   - id: Burger
     item:
     - {fileID: 5432067076433126416}
@@ -3214,6 +3214,7 @@ MonoBehaviour:
     - {fileID: 7229065133087556553}
     itemSprite: {fileID: 21300000, guid: e0025aef3269a4cbd810885add072fe5, type: 3}
   itemStateDatas: []
+  activeObjectIndex: 0
 --- !u!1 &6379082925630212315
 GameObject:
   m_ObjectHideFlags: 0
@@ -12005,43 +12006,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2156628466722953044, guid: a11cd3f9fbae32846ae770766af5f981, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.89799994
+      value: 0.874
       objectReference: {fileID: 0}
     - target: {fileID: 2156628466722953044, guid: a11cd3f9fbae32846ae770766af5f981, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0098
+      value: 0.262
       objectReference: {fileID: 0}
     - target: {fileID: 2156628466722953044, guid: a11cd3f9fbae32846ae770766af5f981, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.58000004
+      value: -0.655
       objectReference: {fileID: 0}
     - target: {fileID: 2156628466722953044, guid: a11cd3f9fbae32846ae770766af5f981, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8855862
+      value: 0.88503736
       objectReference: {fileID: 0}
     - target: {fileID: 2156628466722953044, guid: a11cd3f9fbae32846ae770766af5f981, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.03117524
       objectReference: {fileID: 0}
     - target: {fileID: 2156628466722953044, guid: a11cd3f9fbae32846ae770766af5f981, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.46447507
+      value: 0.4641871
       objectReference: {fileID: 0}
     - target: {fileID: 2156628466722953044, guid: a11cd3f9fbae32846ae770766af5f981, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.016350888
       objectReference: {fileID: 0}
     - target: {fileID: 2156628466722953044, guid: a11cd3f9fbae32846ae770766af5f981, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 2.293
       objectReference: {fileID: 0}
     - target: {fileID: 2156628466722953044, guid: a11cd3f9fbae32846ae770766af5f981, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 55.352
+      value: 55.419
       objectReference: {fileID: 0}
     - target: {fileID: 2156628466722953044, guid: a11cd3f9fbae32846ae770766af5f981, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 3.321
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
