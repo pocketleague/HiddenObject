@@ -3140,7 +3140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6377415515615969304}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
@@ -3151,7 +3151,7 @@ Transform:
   - {fileID: 7074341726190210775}
   - {fileID: 7445116817955026483}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1306764588925968198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3168,7 +3168,6 @@ MonoBehaviour:
   - id: Apple
     item:
     - {fileID: 4529232321607252777}
-    - {fileID: 5652152206749564891}
     itemSprite: {fileID: 21300000, guid: a25ad5d8c8571cc45a54666e80af1fdb, type: 3}
   - id: Banana
     item:
@@ -3224,6 +3223,7 @@ MonoBehaviour:
     - {fileID: 9062588268823698351}
     itemSprite: {fileID: 21300000, guid: ece1c828517041442ad52899e79859a3, type: 3}
   itemStateDatas: []
+  activeObjectIndex: 0
 --- !u!1 &6379082925630212315
 GameObject:
   m_ObjectHideFlags: 0
@@ -19159,17 +19159,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2156628466722953044, guid: a6f233509265d004bb7b028b93605d19, type: 3}
   m_PrefabInstance: {fileID: 6488384597419893129}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5652152206749564891 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1475814080469753426, guid: a6f233509265d004bb7b028b93605d19, type: 3}
-  m_PrefabInstance: {fileID: 6488384597419893129}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fcdd44cae9793f4697ceceded6988dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6534604743593482564
 PrefabInstance:
   m_ObjectHideFlags: 0

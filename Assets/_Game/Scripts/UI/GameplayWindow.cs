@@ -29,7 +29,7 @@ namespace Scripts.UI
 
         List<ObjectUiItemView> itemList;
         //List<ObjectUiItemView> itemList;
-
+        public int activeObjectIndex;
 
         [Inject]
         private void Construct(IGameplayCenterService service)
@@ -63,6 +63,7 @@ namespace Scripts.UI
 
         void SpawnItemsUI(LevelPrefabView view)
         {
+            int childPosIndex = 0;
             // Delete old items
             foreach (ObjectUiItemView item in itemList)
             {
@@ -83,9 +84,30 @@ namespace Scripts.UI
                 {
                     totalCount++;
                 }
+                childPosIndex++;
 
                 UiItemView.Setup(totalCount, itemData.id, itemData.itemSprite);
+                UiItemView.SetChildIndex(childPosIndex);
+                UiItemView.gameObject.SetActive(false);
+
             }
+
+            for (int j = 0; j < 3; j++)
+            {
+                EnableTargetObjectUI(j);
+            }
+        }
+
+        void EnableTargetObjectUI(int childPos)
+        {
+            //if (activeObjectIndex < itemList.Count)
+            //{
+                GameObject targetobject = itemList[0].gameObject;
+                targetobject.transform.SetSiblingIndex(childPos);
+                itemList[activeObjectIndex].SetChildIndex(childPos);
+                targetobject.gameObject.SetActive(true);
+                activeObjectIndex++;
+           // }
         }
 
         private void OnGamePlayEnded()
@@ -105,6 +127,7 @@ namespace Scripts.UI
                     {
                         itemList.Remove(uiItemView);
                         Destroy(uiItemView.gameObject);
+                        EnableTargetObjectUI(uiItemView.childPosIndex);
                         break;
                     }
                 }

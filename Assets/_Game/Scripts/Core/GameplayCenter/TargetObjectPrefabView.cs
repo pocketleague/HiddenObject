@@ -21,8 +21,13 @@ public class TargetObjectPrefabView : MonoBehaviour
 		_itemStateData = itemStateData;
 		_levelPrefabView = levelPrefabView;
 		gameObject.name = itemStateData.itemID + "-" + gameObject.name;
-
+		clickableObject.gameObject.layer = 0;
 		clickableObject.Setup(this);
+	}
+
+	public void EnableClickable()
+    {
+		clickableObject.gameObject.layer = 6;
 	}
 
 	public void FoundObject(Vector3 hitPoint)

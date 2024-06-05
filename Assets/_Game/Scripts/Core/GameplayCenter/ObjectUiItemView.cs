@@ -14,13 +14,19 @@ namespace GameplayCenter
 
         public int counter;
         public string itemID;
-
+        public int childPosIndex;
         public void Setup(int count, string _itemId, Sprite objectSprite)
         {
+           
             counter = count;
             txt_count.text = "" + counter;
             object_Img.sprite = objectSprite;
             itemID = _itemId;
+        }
+
+        public void SetChildIndex(int childPos)
+        {
+            childPosIndex = childPos;
         }
 
         public void ReduceCount()

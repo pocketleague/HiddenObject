@@ -238,7 +238,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0.000061035}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &629527518513961519
 MonoBehaviour:
@@ -253,16 +253,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 70
-    m_Right: 70
+    m_Left: 20
+    m_Right: 20
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 200, y: 200}
-  m_Spacing: {x: 50, y: 50}
-  m_Constraint: 1
+  m_Spacing: {x: 40, y: 40}
+  m_Constraint: 0
   m_ConstraintCount: 3
 --- !u!1 &3943195314075112797
 GameObject:
@@ -295,10 +295,10 @@ RectTransform:
   - {fileID: 7707897372698616765}
   m_Father: {fileID: 1362283176059438329}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.037437495}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.21439064}
-  m_AnchoredPosition: {x: 0, y: 1.7299805}
-  m_SizeDelta: {x: 0, y: 1.3178711}
+  m_AnchoredPosition: {x: 0, y: 1.3579102}
+  m_SizeDelta: {x: 0, y: 2.060997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5092799725478260307
 GameObject:

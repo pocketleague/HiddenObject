@@ -8,7 +8,7 @@ public class LevelPrefabView : MonoBehaviour
 {
     public List<LevelItemData> levelItemDatas;
     [SerializeField] private List<ItemStateData> itemStateDatas = new List<ItemStateData>();
-
+    public int activeObjectIndex = -1;
     public void OnSetUp(Action callBack)
     {
         for(int i =0; i< levelItemDatas.Count; i++ )
@@ -26,6 +26,11 @@ public class LevelPrefabView : MonoBehaviour
             }
         }
 
+        for(int i =0;i < 3; i++)
+        {
+            ActiveNewObject();
+        }
+
         callBack.Invoke();
     }
 
@@ -34,7 +39,18 @@ public class LevelPrefabView : MonoBehaviour
         if(itemStateDatas.Contains(itemStateData))
         {
             itemStateDatas.Remove(itemStateData);
+            ActiveNewObject();
         }
+    }
+
+    public void ActiveNewObject()
+    {
+        if(activeObjectIndex < itemStateDatas.Count)
+        {
+            itemStateDatas[activeObjectIndex].item.GetComponent<TargetObjectPrefabView>().EnableClickable();
+            activeObjectIndex++;
+        }
+       
     }
 
     private void OnDisable()
