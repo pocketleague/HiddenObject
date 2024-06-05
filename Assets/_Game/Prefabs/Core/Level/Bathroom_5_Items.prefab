@@ -862,13 +862,14 @@ MonoBehaviour:
     itemSprite: {fileID: 21300000, guid: e85bd7b57ddd64370a4145c4cf4d362c, type: 3}
   - id: Baseball
     item:
-    - {fileID: 0}
+    - {fileID: 9118180374889281926}
     itemSprite: {fileID: 21300000, guid: 45ac76c767f2743089122dfa112989c1, type: 3}
   - id: Basketball
     item:
     - {fileID: 3025216040049799141}
     itemSprite: {fileID: 21300000, guid: 2e070ac2f81ed4c739ec37d6642a1e56, type: 3}
   itemStateDatas: []
+  activeObjectIndex: -1
 --- !u!1 &7170694892068759535
 GameObject:
   m_ObjectHideFlags: 0
@@ -28067,6 +28068,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2156628466722953044, guid: 882749b69e11fb14dab5a3f3ff5a075f, type: 3}
   m_PrefabInstance: {fileID: 7706061022504544212}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9118180374889281926 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1475814080469753426, guid: 882749b69e11fb14dab5a3f3ff5a075f, type: 3}
+  m_PrefabInstance: {fileID: 7706061022504544212}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcdd44cae9793f4697ceceded6988dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7722045337037916910
 PrefabInstance:
   m_ObjectHideFlags: 0

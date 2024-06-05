@@ -8,7 +8,7 @@ public class LevelPrefabView : MonoBehaviour
 {
     public List<LevelItemData> levelItemDatas;
     [SerializeField] private List<ItemStateData> itemStateDatas = new List<ItemStateData>();
-    public int activeObjectIndex = -1;
+    public int activeObjectIndex = 0;
     public void OnSetUp(Action callBack)
     {
         for(int i =0; i< levelItemDatas.Count; i++ )
@@ -25,8 +25,8 @@ public class LevelPrefabView : MonoBehaviour
                 itemStateDatas.Add(itemStateData);
             }
         }
-
-        for(int i =0;i < 3; i++)
+        activeObjectIndex = 0;
+        for (int i =0;i < 3; i++)
         {
             ActiveNewObject();
         }
