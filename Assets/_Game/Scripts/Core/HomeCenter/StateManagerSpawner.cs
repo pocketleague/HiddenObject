@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Scripts.Core
+namespace Scripts.Core.StateManager
 {
     public class StateManagerSpawner : MonoBehaviour
     {

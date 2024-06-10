@@ -3,53 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using Scripts.Core.LevelSelection;
 using Zenject;
-using GameplayCenter;
+using Scripts.Core.GameplayCenter;
 
-public class TargetObjectPrefabView : MonoBehaviour
+namespace Scripts.Core.GameplayCenter
 {
-	ItemStateData _itemStateData;
-	LevelPrefabView _levelPrefabView;
-	[SerializeField] private GameObject			itemHolder;
-	[SerializeField] private ClickableObject	clickableObject;
-	[SerializeField] private GameObject			clickParticle;
-	GameObject particleEffect;
-
-	[Inject] private IGameplayCenterService _gameplayCenterService;
-
-	public void SetUp(ItemStateData itemStateData, LevelPrefabView levelPrefabView)
+	public class TargetObjectPrefabView : MonoBehaviour
 	{
-		_itemStateData = itemStateData;
-		_levelPrefabView = levelPrefabView;
-		gameObject.name = itemStateData.itemID + "-" + gameObject.name;
-		clickableObject.gameObject.layer = 0;
-		clickableObject.Setup(this);
-	}
+		ItemStateData _itemStateData;
+		LevelPrefabView _levelPrefabView;
+		[SerializeField] private GameObject itemHolder;
+		[SerializeField] private ClickableObject clickableObject;
+		[SerializeField] private GameObject clickParticle;
+		GameObject particleEffect;
 
-	public void EnableClickable()
-    {
-		clickableObject.gameObject.layer = 6;
-	}
+		[Inject] private IGameplayCenterService _gameplayCenterService;
 
-	public void FoundObject(Vector3 hitPoint)
-	{
-		 particleEffect =  Instantiate(clickParticle, hitPoint, Quaternion.identity);
-		//Vector3 dir = Camera.main.transform.position - particleEffect.transform.position;
-		particleEffect.transform.LookAt(Camera.main.transform,Vector3.up);
-
-		_gameplayCenterService.FoundObject(_itemStateData);
-
-		LeanTween.scale(gameObject, Vector3.zero, 0.5f).setEaseInCirc().setOnComplete(()=>
+		public void SetUp(ItemStateData itemStateData, LevelPrefabView levelPrefabView)
 		{
-			DestroyObject();
-		});
-		//_levelPrefabView.FoundObject(_itemStateData);
-		//Destroy(gameObject);
-	}
+			_itemStateData = itemStateData;
+			_levelPrefabView = levelPrefabView;
+			gameObject.name = itemStateData.itemID + "-" + gameObject.name;
+			clickableObject.gameObject.layer = 0;
+			clickableObject.Setup(this);
+		}
 
-	void DestroyObject()
-    {
-		Destroy(particleEffect);
-		Destroy(gameObject);
+		public void EnableClickable()
+		{
+			clickableObject.gameObject.layer = 6;
+		}
 
+		public void FoundObject(Vector3 hitPoint)
+		{
+			particleEffect = Instantiate(clickParticle, hitPoint, Quaternion.identity);
+			//Vector3 dir = Camera.main.transform.position - particleEffect.transform.position;
+			particleEffect.transform.LookAt(UnityEngine.Camera.main.transform, Vector3.up);
+
+			_gameplayCenterService.FoundObject(_itemStateData);
+
+			LeanTween.scale(gameObject, Vector3.zero, 0.5f).setEaseInCirc().setOnComplete(() =>
+			{
+				DestroyObject();
+			});
+			//_levelPrefabView.FoundObject(_itemStateData);
+			//Destroy(gameObject);
+		}
+
+		void DestroyObject()
+		{
+			Destroy(particleEffect);
+			Destroy(gameObject);
+
+		}
 	}
 }

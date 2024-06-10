@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace RewardCenter
+namespace Scripts.Core.RewardCenter
 {
     public interface IRewardCenterService
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-namespace Scripts.Core
+namespace Scripts.Core.StateManager
 {
     [CreateAssetMenu(menuName = ("Installers/StateManagerInstaller"), fileName = "StateManagerInstaller")]
     public class StateManagerInstaller : ScriptableObjectInstaller

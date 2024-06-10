@@ -1,7 +1,7 @@
 using System;
 using Scripts.Core.LevelSelection;
 
-namespace GameplayCenter
+namespace Scripts.Core.GameplayCenter
 {
     public interface IGameplayCenterService
     {

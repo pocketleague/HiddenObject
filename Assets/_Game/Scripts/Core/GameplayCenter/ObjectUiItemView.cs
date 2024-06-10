@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using Scripts.Core.LevelSelection;
 
-namespace GameplayCenter
+namespace Scripts.Core.GameplayCenter
 {
     public class ObjectUiItemView : MonoBehaviour
     {

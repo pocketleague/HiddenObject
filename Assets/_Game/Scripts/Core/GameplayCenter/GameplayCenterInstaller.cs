@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace GameplayCenter
+namespace Scripts.Core.GameplayCenter
 {
     [CreateAssetMenu(menuName = ("Installers/GameplayInstaller"), fileName = "GameplayInstaller")]
     public class GameplayCenterInstaller : ScriptableObjectInstaller

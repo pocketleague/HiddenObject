@@ -5,7 +5,7 @@ using Zenject;
 using Scripts.GameLoop;
 using Scripts.UI;
 using TMPro;
-using GameplayCenter;
+using Scripts.Core.GameplayCenter;
 
 namespace Scripts.Timer
 {

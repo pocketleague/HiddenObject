@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 using Scripts.GameLoop;
-using GameplayCenter;
+using Scripts.Core.GameplayCenter;
 
 namespace Scripts.Timer
 {

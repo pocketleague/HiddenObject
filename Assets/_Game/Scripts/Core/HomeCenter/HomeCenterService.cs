@@ -2,10 +2,9 @@ using UnityEngine;
 using Zenject;
 using Scripts.Stages;
 using System;
-using GameplayCenter;
-using Scripts.Core;
+using Scripts.Core.StateManager;
 
-namespace HomeCenter
+namespace Scripts.Core.HomeCenter
 {
     public class HomeCenterService : IHomeCenterService, IState
     {

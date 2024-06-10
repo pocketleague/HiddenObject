@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickableObject : MonoBehaviour
+namespace Scripts.Core.GameplayCenter
 {
-	TargetObjectPrefabView _targetObjectPrefabView = null;
-
-	public void Setup(TargetObjectPrefabView targetObjectPrefabView)
-    {
-		_targetObjectPrefabView = targetObjectPrefabView;
-		gameObject.layer = 6;
-	}
-
-	public void OnClick(Vector3 hitPoint)
+	public class ClickableObject : MonoBehaviour
 	{
-		_targetObjectPrefabView.FoundObject(hitPoint);
+		TargetObjectPrefabView _targetObjectPrefabView = null;
+
+		public void Setup(TargetObjectPrefabView targetObjectPrefabView)
+		{
+			_targetObjectPrefabView = targetObjectPrefabView;
+			gameObject.layer = 6;
+		}
+
+		public void OnClick(Vector3 hitPoint)
+		{
+			_targetObjectPrefabView.FoundObject(hitPoint);
+		}
 	}
-
-
 }

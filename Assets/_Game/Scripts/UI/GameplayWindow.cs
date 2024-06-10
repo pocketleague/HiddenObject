@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 using Zenject;
-using GameplayCenter;
-using Scripts.Core;
+using Scripts.UI;
 using Scripts.Core.LevelSelection;
 using Scripts.Timer;
+using Scripts.Core.StateManager;
 
-namespace Scripts.UI
+namespace Scripts.Core.GameplayCenter
 {
     [RequireComponent(typeof( Window ) )]
     public class GameplayWindow : MonoBehaviour
@@ -27,7 +27,7 @@ namespace Scripts.UI
 
         [SerializeField] Transform content;
 
-     [SerializeField]   List<ObjectUiItemView> itemList;
+        [SerializeField]   List<ObjectUiItemView> itemList;
         //List<ObjectUiItemView> itemList;
         public int activeObjectIndex;
 

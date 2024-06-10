@@ -1,15 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
-using Scripts.Stages;
 using System;
-using Scripts.Core;
 using Scripts.PlayerControl;
 using Scripts.Camera;
 using Scripts.Core.LevelSelection;
+using Scripts.Core.StateManager;
 
-namespace GameplayCenter
+namespace Scripts.Core.GameplayCenter
 {
     public class GameplayCenterService : IGameplayCenterService, IState
     {
@@ -25,7 +22,7 @@ namespace GameplayCenter
 
         public LevelPrefabView CurrentLevelPrefabView;
 
-        private Camera mainCam;
+        private UnityEngine.Camera mainCam;
 
         private LayerMask targetLayer;
 

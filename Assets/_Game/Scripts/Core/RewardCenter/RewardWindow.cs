@@ -1,13 +1,12 @@
-using Scripts.Stages;
 using UnityEngine;
 using UnityEngine.UI;
 
 using Zenject;
-using RewardCenter;
-using Scripts.Core;
+using Scripts.UI;
 using Scripts.Core.LevelSelection;
+using Scripts.Core.StateManager;
 
-namespace Scripts.UI
+namespace Scripts.Core.RewardCenter
 {
     public class RewardWindow : MonoBehaviour
     {

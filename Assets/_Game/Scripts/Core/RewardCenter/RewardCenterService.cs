@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Scripts.Core;
 using System;
+using Scripts.Core.StateManager;
 
-namespace RewardCenter
+namespace Scripts.Core.RewardCenter
 {
     public class RewardCenterService : IRewardCenterService, IState
     {

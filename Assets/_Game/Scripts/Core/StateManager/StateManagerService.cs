@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
-using HomeCenter;
-using GameplayCenter;
-using RewardCenter;
+using Scripts.Core.HomeCenter;
+using Scripts.Core.GameplayCenter;
+using Scripts.Core.RewardCenter;
 using System;
 using Scripts.Core.LevelSelection;
 
-namespace Scripts.Core
+namespace Scripts.Core.StateManager
 {
     public class StateManagerService : IStateManagerService
     {

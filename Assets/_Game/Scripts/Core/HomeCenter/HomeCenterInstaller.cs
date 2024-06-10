@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-namespace HomeCenter
+namespace Scripts.Core.HomeCenter
 {
     [CreateAssetMenu(menuName = ("Installers/HomeCenterInstaller"), fileName = "HomeCenterInstaller")]
     public class HomeCenterInstaller : ScriptableObjectInstaller

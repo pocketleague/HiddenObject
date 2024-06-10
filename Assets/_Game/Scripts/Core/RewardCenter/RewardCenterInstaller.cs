@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-namespace RewardCenter
+namespace Scripts.Core.RewardCenter
 {
     [CreateAssetMenu(menuName = ("Installers/RewardCenterInstaller"), fileName = "RewardCenterInstaller")]
     public class RewardCenterInstaller : ScriptableObjectInstaller

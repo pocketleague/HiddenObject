@@ -5,68 +5,71 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class TouchController : MonoBehaviour
+namespace Scripts.Core.GameplayCenter
 {
-	Camera targetCamera;
-	bool isDragging = false;
-	public LayerMask layer;
-
-	void Start()
+	public class TouchController : MonoBehaviour
 	{
-		targetCamera = Camera.main;
-	}
+		UnityEngine.Camera targetCamera;
+		bool isDragging = false;
+		public LayerMask layer;
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-			bool isTargetClicked = false;
-			Debug.Log("mouse click");
+		void Start()
+		{
+			targetCamera = UnityEngine.Camera.main;
+		}
 
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			RaycastHit hit;
-			if (Physics.Raycast(ray, out hit, Mathf.Infinity, layer))
+		private void Update()
+		{
+			if (Input.GetMouseButtonDown(0))
 			{
-				Debug.Log(hit.transform.gameObject.layer);
-				Debug.Log("hit");
-				Vector3 p = hit.point;
-				// p.z = 10;
+				bool isTargetClicked = false;
+				Debug.Log("mouse click");
 
-				if (hit.collider.gameObject.layer == 6)
+				Ray ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);
+				RaycastHit hit;
+				if (Physics.Raycast(ray, out hit, Mathf.Infinity, layer))
 				{
+					Debug.Log(hit.transform.gameObject.layer);
+					Debug.Log("hit");
+					Vector3 p = hit.point;
+					// p.z = 10;
 
-					isTargetClicked = SelectClickedObjectAndCallAction(hit.transform);
-					//if (isTargetClicked)
-					//{
-					//	Instantiate(ps, p, Quaternion.identity);
-					//}
-				}
+					if (hit.collider.gameObject.layer == 6)
+					{
 
-				if (!isTargetClicked)
-				{
-					// misclick
-					//PointerMisclick.Invoke(hit.point);
+						isTargetClicked = SelectClickedObjectAndCallAction(hit.transform);
+						//if (isTargetClicked)
+						//{
+						//	Instantiate(ps, p, Quaternion.identity);
+						//}
+					}
+
+					if (!isTargetClicked)
+					{
+						// misclick
+						//PointerMisclick.Invoke(hit.point);
+					}
 				}
 			}
 		}
-    }
 
-	bool SelectClickedObjectAndCallAction(Transform colliders)
-	{
-		if(colliders.gameObject.layer == 6)
-        {
-			ClickableObject tobj = colliders.gameObject.GetComponent<ClickableObject>();
+		bool SelectClickedObjectAndCallAction(Transform colliders)
+		{
+			if (colliders.gameObject.layer == 6)
+			{
+				ClickableObject tobj = colliders.gameObject.GetComponent<ClickableObject>();
 
-			if (tobj != null )
-			{
-				//tobj.OnClick();
-				return true;
+				if (tobj != null)
+				{
+					//tobj.OnClick();
+					return true;
+				}
+				else
+				{
+					return false;
+				}
 			}
-			else
-			{
-				return false;
-			}
+			return false;
 		}
-		return false;
 	}
 }

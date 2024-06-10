@@ -2,8 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
-using HomeCenter;
-using Scripts.Core;
+using Scripts.Core.HomeCenter;
+using Scripts.Core.StateManager;
 
 namespace Scripts.UI
 {

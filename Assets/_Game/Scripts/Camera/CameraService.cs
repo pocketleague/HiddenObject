@@ -2,7 +2,7 @@
 using Scripts.Stages;
 using UnityEngine;
 using Zenject;
-using HomeCenter;
+using Scripts.Core.HomeCenter;
 
 namespace Scripts.Camera
 {
