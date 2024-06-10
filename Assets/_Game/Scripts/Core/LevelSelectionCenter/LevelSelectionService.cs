@@ -41,6 +41,8 @@ namespace Scripts.Core.LevelSelection
                 index = 0;
             }
 
+            GamesData.Instance.SetProgression(GameAnalyticsSDK.GAProgressionStatus.Start, index.ToString());
+
             CurrentLevelConfig = GetLevelAtIndex(index);
             currentLevel = index;
             _stateManagerService.ChangeState(EState.GameplayCenter);

@@ -46,6 +46,8 @@ namespace Scripts.UI
 
         void End()
         {
+            GamesData.Instance.SetProgression(GameAnalyticsSDK.GAProgressionStatus.Complete, _levelSelectionService.currentLevel.ToString());
+
             int i = _levelSelectionService.currentLevel;
             i++;
             _levelSelectionService.SelectLevel(i);

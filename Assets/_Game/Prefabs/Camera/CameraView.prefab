@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2772555852427951812}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.138, z: 0.379}
+  m_LocalPosition: {x: 0, y: -0.55, z: 14.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -116,14 +116,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5185662419576160126}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17364816, y: -0, z: -0, w: 0.9848078}
-  m_LocalPosition: {x: -4.5, y: 8.5, z: -19.9}
+  m_LocalRotation: {x: 0.2331848, y: -0, z: -0, w: 0.9724325}
+  m_LocalPosition: {x: -8.669088, y: 10.884462, z: -19.798954}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1673448975250807502}
   m_Father: {fileID: 6170234202363187893}
-  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.969, y: 0, z: 0}
 --- !u!20 &4263283353391216523
 Camera:
   m_ObjectHideFlags: 0
@@ -157,8 +157,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50
-  orthographic: 1
+  field of view: 30
+  orthographic: 0
   orthographic size: 6
   m_Depth: -1
   m_CullingMask:
@@ -202,11 +202,11 @@ MonoBehaviour:
     RequiredMouseButtons: 0
     RequiredSelectable: {fileID: 0}
   _camera: {fileID: 0}
-  zoom: 6
+  zoom: 30
   damping: -1
   clamp: 1
-  clampMin: 5
-  clampMax: 7.985108
+  clampMin: 20
+  clampMax: 30
   relative: 0
   ignoreZ: 0
   ScreenDepth:
@@ -217,7 +217,7 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 4294967291
     Distance: 0
-  currentZoom: 6
+  currentZoom: 30
   remainingTranslation: {x: 0, y: 0, z: 0}
 --- !u!114 &1910978000483988674
 MonoBehaviour:
