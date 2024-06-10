@@ -84,7 +84,6 @@ namespace Scripts.Core.GameplayCenter
             //Debug.Log("click position " + worldPosition);
 
             bool isTargetClicked = false;
-            Debug.Log("mouse click");
 
             Ray ray = mainCam.ScreenPointToRay(pos);
             RaycastHit hit;

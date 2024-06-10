@@ -20,6 +20,9 @@ namespace Scripts.Timer
         private float timeLeft;
         private float timeToSubtract;
 
+        private float freezeTimeLeft;
+        private bool isFreeze;
+
         [Inject]
         private void Construct(TimerConfig config, IPlayerLoop playerLoop, IGameplayCenterService gameplayCenterService)
         {
@@ -36,6 +39,15 @@ namespace Scripts.Timer
             if (!timerOn)
                 return;
 
+            HandleFreeze();
+            HandleMainTimer();
+        }
+
+        void HandleMainTimer()
+        {
+            if (isFreeze)
+                return;
+
             timeToSubtract += Time.deltaTime;
 
             if (timeToSubtract < 1)
@@ -45,9 +57,23 @@ namespace Scripts.Timer
             ReduceTimer(1);
         }
 
+        void HandleFreeze()
+        {
+            if (!isFreeze)
+                return;
+
+            freezeTimeLeft -= Time.deltaTime;
+
+            if (freezeTimeLeft <= 0)
+            {
+                // Freeze time ended
+                isFreeze = false;
+            }
+        }
+
         public void Penalty()
         {
-            ReduceTimer(3);
+            ReduceTimer(_config.time_penalty);
         }
 
         void ReduceTimer(float timeToSubtract)
@@ -76,6 +102,10 @@ namespace Scripts.Timer
             timerOn = false;
         }
 
-       
+        public void Freeze()
+        {
+            isFreeze = true;
+            freezeTimeLeft = 3;
+        }
     }
 }

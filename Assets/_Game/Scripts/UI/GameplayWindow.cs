@@ -22,7 +22,7 @@ namespace Scripts.Core.GameplayCenter
 
         private Window _targetWindow;
 
-        [SerializeField] Button btnEnd, btnPenalty;
+        [SerializeField] Button btnEnd, btnPenalty, btnFreeze;
         [SerializeField] ObjectUiItemView itemView_prefab;
 
         [SerializeField] Transform content;
@@ -46,6 +46,7 @@ namespace Scripts.Core.GameplayCenter
 
             btnEnd.onClick.AddListener(End);
             btnPenalty.onClick.AddListener(Penalty);
+            btnFreeze.onClick.AddListener(Freeze);
 
             itemList = new List<ObjectUiItemView>();
         }
@@ -150,6 +151,11 @@ namespace Scripts.Core.GameplayCenter
         void Penalty()
         {
             _timerService.Penalty();
+        }
+
+        void Freeze()
+        {
+            _timerService.Freeze();
         }
     }
 }

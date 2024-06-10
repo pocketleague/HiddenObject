@@ -11,5 +11,6 @@ namespace Scripts.Timer
         event Action OnTimerEnded;
         
         void Penalty();
+        void Freeze();
     }
 }
