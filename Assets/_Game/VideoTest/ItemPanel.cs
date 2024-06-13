@@ -6,11 +6,16 @@ namespace Video
 {
     public class ItemPanel : MonoBehaviour
     {
-        public GameObject pf, content;
+        public ItemUiView pf_itemUi;
+        public Transform content;
+
         public GameConfig gameConfig;
+
+        public Dictionary<string, ItemUiView> itemList = new Dictionary<string, ItemUiView>();
 
         void Start()
         {
+            GameManager.OnItemClicked += OnItemClicked;
             SpawnUiItem();
         }
 
@@ -18,8 +23,22 @@ namespace Video
         {
             foreach (var item in gameConfig.itemConfigs)
             {
-                Instantiate(item, content.transform);
+                ItemUiView itemUiView =  Instantiate(pf_itemUi, content.transform);
+                itemUiView.Setup(item);
+
+                itemList.Add(item.itemId , itemUiView);
             }
+        }
+
+        void OnItemClicked(ItemConfig itemConfig)
+        {
+            if (itemList.ContainsKey(itemConfig.itemId))
+            {
+                Debug.Log("Destroy item "+ itemConfig.itemId);
+                Destroy(itemList[itemConfig.itemId].gameObject);
+                itemList.Remove(itemConfig.itemId);
+            }
+
         }
     }
 }

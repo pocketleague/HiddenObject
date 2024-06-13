@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0619aeb6e84f843c9a17ef880b77076b, type: 3}
-  m_Name: ItemConfig3
+  m_Name: Item_CombBrush
   m_EditorClassIdentifier: 
-  itemId: 
-  itemSprite: {fileID: 0}
+  itemId: CombBrush
+  itemSprite: {fileID: 21300000, guid: 58af7786f82984d7598ffcc0f768f37c, type: 3}
