@@ -15,7 +15,11 @@ namespace Video
         {
             Destroy(gameObject);
             return itemConfig;
+        }
 
+        public void HandleClickable(bool status)
+        {
+            IsClickable = status;
         }
     }
 }

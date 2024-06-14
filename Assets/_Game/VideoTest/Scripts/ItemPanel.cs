@@ -35,7 +35,10 @@ namespace Video
             if (itemList.ContainsKey(itemConfig.itemId))
             {
                 Debug.Log("Destroy item "+ itemConfig.itemId);
-                Destroy(itemList[itemConfig.itemId].gameObject);
+                //Destroy(itemList[itemConfig.itemId].gameObject);
+
+                itemList[itemConfig.itemId].MarkDone();
+
                 itemList.Remove(itemConfig.itemId);
             }
 
