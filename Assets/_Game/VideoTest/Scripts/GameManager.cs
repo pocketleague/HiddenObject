@@ -16,6 +16,8 @@ namespace Video
         public CameraStateConfig defaultState;
         public CameraStateConfig CurrentState;
 
+        public WrongClickSpawner wrongClickSpawner;
+
         private void Start()
         {
             CurrentState = defaultState;
@@ -34,11 +36,33 @@ namespace Video
                         SelectObjectAndCallAction(hit.transform, hit.point);
                     else if(hit.collider.gameObject.layer == 8)
                         SelectDrawer(hit.collider.GetComponent<Opener>());
+                    else if (hit.collider.gameObject.layer == 9)
+                    {
 
+                    }
+                    else
+                    {
+                        Debug.Log("spawn wrong image "+hit.point);
+
+                        wrongClickSpawner.SpawnWrongImage();
+                    }
                 }
             }
 
             UpdateCam();
+        }
+
+        void ShowWrong(Vector3 pos)
+        {
+            // Get the mouse position in world space
+            Vector3 mousePos = Input.mousePosition;
+            mousePos.z = 10.0f; // Set a fixed distance from the camera
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+            //worldPos = pos;
+
+            // Instantiate the image prefab at the calculated world position
+            Instantiate(wrongClickSpawner, worldPos, Quaternion.identity);
         }
 
         void SelectObjectAndCallAction(Transform obj, Vector3 hitPoint)

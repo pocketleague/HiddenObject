@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: CameraState_front
   m_EditorClassIdentifier: 
   stateId: Gameplay
-  movementOffset: {x: 0.05, y: 4.5, z: 7.25}
+  movementOffset: {x: 0.05, y: 2.74, z: 4.63}
   movementChangeSpeed: 2
   distance: 0
   distanceChangeSpeed: 2
-  rotation: {x: 30.000008, y: 180, z: 0}
+  rotation: {x: 30.00001, y: 180, z: 0}
   rotationChangeSpeed: 2
   clipping: {x: 1, y: 100}
   clippingChangeSpeed: 1

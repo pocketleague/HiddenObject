@@ -11,9 +11,12 @@ namespace Video
 
         public bool IsClickable;
 
+        public GameObject mesh, particlEffect;
+
         public ItemConfig OnClick(Vector3 hitPos)
         {
-            Destroy(gameObject);
+            mesh.SetActive(false);
+            particlEffect.SetActive(true);
             return itemConfig;
         }
 
