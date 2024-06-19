@@ -18,9 +18,19 @@ namespace Video
 
         public WrongClickSpawner wrongClickSpawner;
 
+        public GameObject ItemPanel;
+
         private void Start()
         {
             CurrentState = defaultState;
+
+            // UI Animation
+            Invoke("Delay", 2);
+        }
+
+        void Delay()
+        {
+            ItemPanel.SetActive(true);
         }
 
         void Update()
