@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0619aeb6e84f843c9a17ef880b77076b, type: 3}
-  m_Name: Item_Massager
+  m_Name: Item_DiamondRing
   m_EditorClassIdentifier: 
-  itemId: Massager
-  itemSprite: {fileID: 21300000, guid: 8265318937c3e4c52a201ad82729c380, type: 3}
+  itemId: Bottle
+  itemSprite: {fileID: 21300000, guid: 4e0b53f97232e4aeb82246b164916079, type: 3}

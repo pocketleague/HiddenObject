@@ -11,10 +11,9 @@ namespace Video
         public LayerMask targetLayer;
         public static event Action<ItemConfig> OnItemClicked = delegate { };
 
-        public CameraConfig cameraConfig;
         public CameraView CameraView;
-        public CameraStateConfig defaultState;
-        public CameraStateConfig CurrentState;
+        public CameraStateConfig defaultCamState;
+        private CameraStateConfig CurrentCamState;
 
         public WrongClickSpawner wrongClickSpawner;
 
@@ -22,7 +21,7 @@ namespace Video
 
         private void Start()
         {
-            CurrentState = defaultState;
+            CurrentCamState = defaultCamState;
 
             // UI Animation
             Invoke("Delay", 2);
@@ -98,20 +97,20 @@ namespace Video
         void UpdateCam()
         {
 
-            CameraView.positionTransform.position = Vector3.Lerp(CameraView.positionTransform.position, CurrentState.movementOffset, Time.deltaTime * CurrentState.movementChangeSpeed);
-            CameraView.rotationTransform.rotation = Quaternion.Lerp(CameraView.rotationTransform.rotation, Quaternion.Euler(CurrentState.rotation), Time.deltaTime * CurrentState.rotationChangeSpeed);
-            CameraView.distanceTransform.localPosition = Mathf.Lerp(CameraView.distanceTransform.localPosition.z, -CurrentState.distance, Time.deltaTime * CurrentState.distanceChangeSpeed) * Vector3.forward;
-            CameraView.cameraObject.fieldOfView = Mathf.Lerp(CameraView.cameraObject.fieldOfView, CurrentState.fieldOfView, Time.deltaTime * CurrentState.clippingChangeSpeed);
-            CameraView.cameraObject.nearClipPlane = Mathf.Lerp(CameraView.cameraObject.nearClipPlane, CurrentState.clipping.x, Time.deltaTime * CurrentState.clippingChangeSpeed);
-            CameraView.cameraObject.farClipPlane       = Mathf.Lerp     ( CameraView.cameraObject.farClipPlane        , CurrentState.clipping.y              , Time.deltaTime * CurrentState.clippingChangeSpeed );
+            CameraView.positionTransform.position = Vector3.Lerp(CameraView.positionTransform.position, CurrentCamState.movementOffset, Time.deltaTime * CurrentCamState.movementChangeSpeed);
+            CameraView.rotationTransform.rotation = Quaternion.Lerp(CameraView.rotationTransform.rotation, Quaternion.Euler(CurrentCamState.rotation), Time.deltaTime * CurrentCamState.rotationChangeSpeed);
+            CameraView.distanceTransform.localPosition = Mathf.Lerp(CameraView.distanceTransform.localPosition.z, -CurrentCamState.distance, Time.deltaTime * CurrentCamState.distanceChangeSpeed) * Vector3.forward;
+            CameraView.cameraObject.fieldOfView = Mathf.Lerp(CameraView.cameraObject.fieldOfView, CurrentCamState.fieldOfView, Time.deltaTime * CurrentCamState.clippingChangeSpeed);
+            CameraView.cameraObject.nearClipPlane = Mathf.Lerp(CameraView.cameraObject.nearClipPlane, CurrentCamState.clipping.x, Time.deltaTime * CurrentCamState.clippingChangeSpeed);
+            CameraView.cameraObject.farClipPlane       = Mathf.Lerp     ( CameraView.cameraObject.farClipPlane        , CurrentCamState.clipping.y              , Time.deltaTime * CurrentCamState.clippingChangeSpeed );
         }
 
         public void ChangeCam(CameraStateConfig camConfig = null)
         {
             if (camConfig != null)
-                CurrentState = camConfig;
+                CurrentCamState = camConfig;
             else
-                CurrentState = defaultState;
+                CurrentCamState = defaultCamState;
         }
     }
 }
