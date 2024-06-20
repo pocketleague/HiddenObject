@@ -18,6 +18,7 @@ namespace Video
         public WrongClickSpawner wrongClickSpawner;
 
         public GameObject ItemPanel;
+        public Transform itemCenterPos, itemPosAtGirl;
 
         private void Start()
         {
