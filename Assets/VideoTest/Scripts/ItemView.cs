@@ -11,7 +11,7 @@ namespace Video
 
         public bool IsClickable;
 
-        public GameObject mesh, particlEffect;
+        public GameObject mesh, confetti, poof;
 
         public Vector3 posCache;
 
@@ -23,7 +23,7 @@ namespace Video
         public ItemConfig OnClick(Vector3 hitPos)
         {
             //mesh.SetActive(false);
-            particlEffect.SetActive(true);
+            confetti.SetActive(true);
 
             StartCoroutine(Move());
             return itemConfig;
@@ -40,7 +40,7 @@ namespace Video
             LeanTween.move(gameObject, new Vector3(posCache.x, posCache.y + 5, posCache.z), 0.5f) ;
             LeanTween.rotate(mesh, new Vector3(0,0,0), 0.5f);
 
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
 
             //// Move To Center
             //LeanTween.move(gameObject, gameManager.itemCenterPos, 0.5f);
@@ -49,8 +49,13 @@ namespace Video
 
             // Move To Girl
             LeanTween.move(gameObject, gameManager.itemPosAtGirl, 0.5f);
-            yield return new WaitForSeconds(2);
 
+            yield return new WaitForSeconds(1f);
+            poof.SetActive(true);
+            mesh.SetActive(false);
+
+            yield return new WaitForSeconds(0.1f);
+            gameManager.PlayHeartParticles();
         }
     }
 }

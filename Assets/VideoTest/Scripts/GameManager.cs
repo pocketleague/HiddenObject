@@ -20,6 +20,8 @@ namespace Video
         public GameObject ItemPanel;
         public Transform itemCenterPos, itemPosAtGirl;
 
+        public ParticleSystem heartParticles;
+
         private void Start()
         {
             CurrentCamState = defaultCamState;
@@ -112,6 +114,11 @@ namespace Video
                 CurrentCamState = camConfig;
             else
                 CurrentCamState = defaultCamState;
+        }
+
+        public void PlayHeartParticles()
+        {
+            heartParticles.Play();
         }
     }
 }
