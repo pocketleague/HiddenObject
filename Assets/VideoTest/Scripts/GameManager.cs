@@ -17,10 +17,17 @@ namespace Video
 
         public WrongClickSpawner wrongClickSpawner;
 
-        public GameObject ItemPanel;
+        public GameObject ItemPanel, ThoughtBubble;
         public Transform itemCenterPos, itemPosAtGirl;
 
-        public ParticleSystem heartParticles;
+        public GameObject angryParticle, heartParticles1, heartParticles2;
+        public GameObject angryEmoji1, angryEmoji2;
+
+        private int itemCoount;
+
+        public Boy boy;
+        public Girl girl;
+        public Transform moveOutPos;
 
         private void Start()
         {
@@ -33,6 +40,7 @@ namespace Video
         void Delay()
         {
             ItemPanel.SetActive(true);
+            ThoughtBubble.SetActive(true);
         }
 
         void Update()
@@ -118,7 +126,50 @@ namespace Video
 
         public void PlayHeartParticles()
         {
-            heartParticles.Play();
+            itemCoount++;
+
+            if (itemCoount == 1)
+            {
+                heartParticles1.SetActive(true);
+                girl.Happy();
+                boy.Happy();
+            }
+            if (itemCoount == 2)
+            {
+                heartParticles2.SetActive(true);
+                girl.Happy();
+                boy.Happy();
+            }
+            if (itemCoount == 3)
+            {
+                heartParticles1.SetActive(false);
+                heartParticles2.SetActive(false);
+
+                angryParticle.SetActive(false);
+
+                StartCoroutine(FinalSequence());
+            }
+        }
+
+        IEnumerator FinalSequence()
+        {
+            girl.Crying();
+            boy.Crying();
+
+            angryEmoji1.SetActive(true);
+            angryEmoji2.SetActive(true);
+
+            yield return new WaitForSeconds(3);
+
+            girl.StandUp();
+            yield return new WaitForSeconds(1f);
+
+            girl.Walk();
+
+            yield return new WaitForSeconds(.3f);
+
+            LeanTween.move(girl.gameObject, moveOutPos.position, 1);
+
         }
     }
 }

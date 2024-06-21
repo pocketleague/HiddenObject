@@ -10,12 +10,20 @@ public class SelfDestory : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         //animator.SetTrigger("out");
+
+        if(timer != 0)
+            Invoke("Delay", timer);
     }
 
     public void Hide()
     {
         animator.SetTrigger("out");
-
+        gameObject.SetActive(false);
         //Destroy(gameObject);
+    }
+
+    void Delay()
+    {
+
     }
 }

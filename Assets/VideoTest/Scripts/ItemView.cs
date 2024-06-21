@@ -40,7 +40,7 @@ namespace Video
             LeanTween.move(gameObject, new Vector3(posCache.x, posCache.y + 5, posCache.z), 0.5f) ;
             LeanTween.rotate(mesh, new Vector3(0,0,0), 0.5f);
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
 
             //// Move To Center
             //LeanTween.move(gameObject, gameManager.itemCenterPos, 0.5f);
