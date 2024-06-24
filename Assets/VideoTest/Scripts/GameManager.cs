@@ -29,8 +29,11 @@ namespace Video
         public Girl girl;
         public Transform moveOutPos;
 
+        public GameObject pivot;
+
         private void Start()
         {
+            Cursor.visible = false;
             CurrentCamState = defaultCamState;
 
             // UI Animation
@@ -68,8 +71,18 @@ namespace Video
                     }
                 }
             }
-
+            
             UpdateCam();
+
+            if (Input.GetButtonDown("1"))
+            {
+                Debug.Log("1");
+                LeanTween.rotate(pivot, Vector3.zero, 0.5f);
+            }
+            else if (Input.GetButtonDown("2"))
+            {
+                Debug.Log("2");
+            }
         }
 
         void ShowWrong(Vector3 pos)
@@ -107,7 +120,6 @@ namespace Video
 
         void UpdateCam()
         {
-
             CameraView.positionTransform.position = Vector3.Lerp(CameraView.positionTransform.position, CurrentCamState.movementOffset, Time.deltaTime * CurrentCamState.movementChangeSpeed);
             CameraView.rotationTransform.rotation = Quaternion.Lerp(CameraView.rotationTransform.rotation, Quaternion.Euler(CurrentCamState.rotation), Time.deltaTime * CurrentCamState.rotationChangeSpeed);
             CameraView.distanceTransform.localPosition = Mathf.Lerp(CameraView.distanceTransform.localPosition.z, -CurrentCamState.distance, Time.deltaTime * CurrentCamState.distanceChangeSpeed) * Vector3.forward;

@@ -15,9 +15,11 @@ namespace Video
 
         public Vector3 posCache;
 
+      
+
         private void Awake()
         {
-            posCache = transform.position;
+            posCache = transform.localPosition;
         }
 
         public ItemConfig OnClick(Vector3 hitPos)
@@ -37,7 +39,7 @@ namespace Video
         IEnumerator Move()
         {
             // Move Up
-            LeanTween.move(gameObject, new Vector3(posCache.x, posCache.y + 5, posCache.z), 0.5f) ;
+            LeanTween.moveLocal(gameObject, new Vector3(posCache.x, posCache.y + 5, posCache.z), 0.5f) ;
             LeanTween.rotate(mesh, new Vector3(0,0,0), 0.5f);
 
             yield return new WaitForSeconds(2);

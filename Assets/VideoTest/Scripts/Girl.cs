@@ -6,20 +6,20 @@ public class Girl : MonoBehaviour
 {
     public Animator animator;
 
-    void Start()
-    {
-
-    }
-
     public void Happy()
     {
-        //animator.Play("Happy");
+        StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
+    {
+        animator.Play("Happy");
+        yield return new WaitForSeconds(3);
+        animator.Play("Talking");
     }
 
     public void Crying()
     {
-        //Vector3(-10f, -44f, 103f);
-
         transform.localPosition = new Vector3(-10f, -44f, 103f);
 
         animator.SetTrigger("cry");
