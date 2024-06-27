@@ -14,6 +14,180 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShortKey: 0
   Groups:
+  - GroupName: Misc
+    Items:
+    - Name: Lipstick
+      GameObjectVariants:
+      - {fileID: 2309801481136467094, guid: 81bf9f4fc3c06d649a1116a5bf859d23, type: 3}
+      - {fileID: 2309801481136467094, guid: 2862605b227025b40b62f4073c677e05, type: 3}
+      - {fileID: 2309801481136467094, guid: e4c80efd7718e6743a22d3d9f9da730e, type: 3}
+      Rotation:
+        Constant: {x: 0, y: 0, z: 0}
+        Min: {x: 0, y: 0, z: 0}
+        Max: {x: 0, y: 360, z: 0}
+        Mode: 1
+      Scale:
+        Mode: 1
+        MinScale: {x: 0.3, y: 0.3, z: 0.3}
+        MaxScale: {x: 1, y: 1, z: 1}
+        UnitformScaling: 1
+      AdvancedOptions:
+        AllowPlacementCollisions: 0
+        MultiplyPrefabScale: 1
+        UsePrefabRotation: 0
+        UsePrefabHeight: 1
+        UseIndividualGroundHeight: 1
+        AllowCollision: 0
+        SpacingFactor: 1.5
+        RotationOffset: {x: 0, y: 0, z: 0}
+        NameType: 0
+      IsAdvancesOptionsOpenInEditor: 1
+      IsVariantsOpen: 0
+      VariantsScroll: {x: 0, y: 0}
+      IsOpenInEditor: 1
+    - Name: NailPolish
+      GameObjectVariants:
+      - {fileID: 6628388057211653556, guid: 82ea857dd39c8cd46a460ea28f9ac274, type: 3}
+      - {fileID: 6628388057211653556, guid: aade74b9ae3c44d4b82cc27cdb74531c, type: 3}
+      - {fileID: 6628388057211653556, guid: 36d81a19d6b1f0c48becaf7f3429cca6, type: 3}
+      Rotation:
+        Constant: {x: 0, y: 0, z: 0}
+        Min: {x: 0, y: 0, z: 0}
+        Max: {x: 0, y: 360, z: 0}
+        Mode: 1
+      Scale:
+        Mode: 3
+        MinScale: {x: 1, y: 1, z: 1}
+        MaxScale: {x: 1, y: 1, z: 1}
+        UnitformScaling: 1
+      AdvancedOptions:
+        AllowPlacementCollisions: 0
+        MultiplyPrefabScale: 1
+        UsePrefabRotation: 0
+        UsePrefabHeight: 1
+        UseIndividualGroundHeight: 1
+        AllowCollision: 0
+        SpacingFactor: 1.5
+        RotationOffset: {x: 0, y: 0, z: 0}
+        NameType: 0
+      IsAdvancesOptionsOpenInEditor: 1
+      IsVariantsOpen: 0
+      VariantsScroll: {x: 0, y: 0}
+      IsOpenInEditor: 1
+    - Name: EyelinerBottle
+      GameObjectVariants:
+      - {fileID: 1509247602761947053, guid: 8968ff0ebc3b54240b92799fab7403ef, type: 3}
+      - {fileID: 1509247602761947053, guid: 74e67f456b7fff94ca447e99103e77d6, type: 3}
+      - {fileID: 1509247602761947053, guid: 2d53148d3d4c1c94a9e10f731abec749, type: 3}
+      Rotation:
+        Constant: {x: 0, y: 0, z: 90}
+        Min: {x: 0, y: 0, z: 0}
+        Max: {x: 0, y: 360, z: 0}
+        Mode: 1
+      Scale:
+        Mode: 3
+        MinScale: {x: 1, y: 1, z: 1}
+        MaxScale: {x: 1, y: 1, z: 1}
+        UnitformScaling: 1
+      AdvancedOptions:
+        AllowPlacementCollisions: 0
+        MultiplyPrefabScale: 1
+        UsePrefabRotation: 0
+        UsePrefabHeight: 1
+        UseIndividualGroundHeight: 1
+        AllowCollision: 0
+        SpacingFactor: 1.5
+        RotationOffset: {x: 0, y: 0, z: 0}
+        NameType: 0
+      IsAdvancesOptionsOpenInEditor: 1
+      IsVariantsOpen: 0
+      VariantsScroll: {x: 0, y: 0}
+      IsOpenInEditor: 1
+    - Name: ColorBox2
+      GameObjectVariants:
+      - {fileID: 9197460500425983938, guid: cc162f1efa3d3fc4fab97ace5e3bc50b, type: 3}
+      Rotation:
+        Constant: {x: 0, y: 0, z: 0}
+        Min: {x: 0, y: 0, z: 0}
+        Max: {x: 0, y: 360, z: 0}
+        Mode: 1
+      Scale:
+        Mode: 1
+        MinScale: {x: 0.7, y: 0.7, z: 0.7}
+        MaxScale: {x: 1, y: 1, z: 1}
+        UnitformScaling: 1
+      AdvancedOptions:
+        AllowPlacementCollisions: 0
+        MultiplyPrefabScale: 1
+        UsePrefabRotation: 0
+        UsePrefabHeight: 1
+        UseIndividualGroundHeight: 1
+        AllowCollision: 0
+        SpacingFactor: 1.5
+        RotationOffset: {x: 0, y: 0, z: 0}
+        NameType: 0
+      IsAdvancesOptionsOpenInEditor: 1
+      IsVariantsOpen: 0
+      VariantsScroll: {x: 0, y: 0}
+      IsOpenInEditor: 1
+    - Name: Foundation
+      GameObjectVariants:
+      - {fileID: 7735042527192002771, guid: ec9419de64fe27746878255f1463350d, type: 3}
+      - {fileID: 7735042527192002771, guid: ff0600ee7f05db24ab8f59e112155aa8, type: 3}
+      - {fileID: 7735042527192002771, guid: e0ef3771c3d52c24cb288cddb6e3617e, type: 3}
+      Rotation:
+        Constant: {x: 0, y: 0, z: 0}
+        Min: {x: 0, y: 0, z: 90}
+        Max: {x: 0, y: 360, z: 90}
+        Mode: 1
+      Scale:
+        Mode: 0
+        MinScale: {x: 0.15, y: 1, z: 1}
+        MaxScale: {x: 1, y: 1, z: 1}
+        UnitformScaling: 1
+      AdvancedOptions:
+        AllowPlacementCollisions: 0
+        MultiplyPrefabScale: 1
+        UsePrefabRotation: 0
+        UsePrefabHeight: 1
+        UseIndividualGroundHeight: 1
+        AllowCollision: 0
+        SpacingFactor: 1.5
+        RotationOffset: {x: 0, y: 0, z: 0}
+        NameType: 0
+      IsAdvancesOptionsOpenInEditor: 1
+      IsVariantsOpen: 0
+      VariantsScroll: {x: 0, y: 0}
+      IsOpenInEditor: 1
+    NewGroupItem:
+      Name: 
+      GameObjectVariants:
+      - {fileID: 0}
+      Rotation:
+        Constant: {x: 0, y: 0, z: 0}
+        Min: {x: 0, y: 0, z: 0}
+        Max: {x: 0, y: 360, z: 0}
+        Mode: 1
+      Scale:
+        Mode: 3
+        MinScale: {x: 1, y: 1, z: 1}
+        MaxScale: {x: 1, y: 1, z: 1}
+        UnitformScaling: 1
+      AdvancedOptions:
+        AllowPlacementCollisions: 0
+        MultiplyPrefabScale: 1
+        UsePrefabRotation: 0
+        UsePrefabHeight: 1
+        UseIndividualGroundHeight: 1
+        AllowCollision: 0
+        SpacingFactor: 1
+        RotationOffset: {x: 0, y: 0, z: 0}
+        NameType: 0
+      IsAdvancesOptionsOpenInEditor: 0
+      IsVariantsOpen: 0
+      VariantsScroll: {x: 0, y: 0}
+      IsOpenInEditor: 0
+    IsOpenInEditor: 1
   - GroupName: Buildings
     Items:
     - Name: Vulcan_Satellite_P
@@ -72,177 +246,3 @@ MonoBehaviour:
       VariantsScroll: {x: 0, y: 0}
       IsOpenInEditor: 0
     IsOpenInEditor: 0
-  - GroupName: Misc
-    Items:
-    - Name: Lipstick
-      GameObjectVariants:
-      - {fileID: 2309801481136467094, guid: 81bf9f4fc3c06d649a1116a5bf859d23, type: 3}
-      - {fileID: 2309801481136467094, guid: 2862605b227025b40b62f4073c677e05, type: 3}
-      - {fileID: 2309801481136467094, guid: e4c80efd7718e6743a22d3d9f9da730e, type: 3}
-      Rotation:
-        Constant: {x: 0, y: 0, z: 0}
-        Min: {x: 0, y: 0, z: 0}
-        Max: {x: 0, y: 360, z: 0}
-        Mode: 1
-      Scale:
-        Mode: 1
-        MinScale: {x: 0.3, y: 0.3, z: 0.3}
-        MaxScale: {x: 1, y: 1, z: 1}
-        UnitformScaling: 1
-      AdvancedOptions:
-        AllowPlacementCollisions: 0
-        MultiplyPrefabScale: 1
-        UsePrefabRotation: 0
-        UsePrefabHeight: 1
-        UseIndividualGroundHeight: 1
-        AllowCollision: 0
-        SpacingFactor: 1
-        RotationOffset: {x: 0, y: 0, z: 0}
-        NameType: 0
-      IsAdvancesOptionsOpenInEditor: 1
-      IsVariantsOpen: 0
-      VariantsScroll: {x: 0, y: 0}
-      IsOpenInEditor: 1
-    - Name: NailPolish
-      GameObjectVariants:
-      - {fileID: 6628388057211653556, guid: 82ea857dd39c8cd46a460ea28f9ac274, type: 3}
-      - {fileID: 6628388057211653556, guid: aade74b9ae3c44d4b82cc27cdb74531c, type: 3}
-      - {fileID: 6628388057211653556, guid: 36d81a19d6b1f0c48becaf7f3429cca6, type: 3}
-      Rotation:
-        Constant: {x: 0, y: 0, z: 0}
-        Min: {x: 0, y: 0, z: 0}
-        Max: {x: 0, y: 360, z: 0}
-        Mode: 1
-      Scale:
-        Mode: 3
-        MinScale: {x: 1, y: 1, z: 1}
-        MaxScale: {x: 1, y: 1, z: 1}
-        UnitformScaling: 1
-      AdvancedOptions:
-        AllowPlacementCollisions: 0
-        MultiplyPrefabScale: 1
-        UsePrefabRotation: 0
-        UsePrefabHeight: 1
-        UseIndividualGroundHeight: 1
-        AllowCollision: 0
-        SpacingFactor: 1
-        RotationOffset: {x: 0, y: 0, z: 0}
-        NameType: 0
-      IsAdvancesOptionsOpenInEditor: 1
-      IsVariantsOpen: 0
-      VariantsScroll: {x: 0, y: 0}
-      IsOpenInEditor: 1
-    - Name: EyelinerBottle
-      GameObjectVariants:
-      - {fileID: 1509247602761947053, guid: 8968ff0ebc3b54240b92799fab7403ef, type: 3}
-      - {fileID: 1509247602761947053, guid: 74e67f456b7fff94ca447e99103e77d6, type: 3}
-      - {fileID: 1509247602761947053, guid: 2d53148d3d4c1c94a9e10f731abec749, type: 3}
-      Rotation:
-        Constant: {x: 0, y: 0, z: 90}
-        Min: {x: 0, y: 0, z: 0}
-        Max: {x: 0, y: 360, z: 0}
-        Mode: 1
-      Scale:
-        Mode: 3
-        MinScale: {x: 1, y: 1, z: 1}
-        MaxScale: {x: 1, y: 1, z: 1}
-        UnitformScaling: 1
-      AdvancedOptions:
-        AllowPlacementCollisions: 0
-        MultiplyPrefabScale: 1
-        UsePrefabRotation: 0
-        UsePrefabHeight: 1
-        UseIndividualGroundHeight: 1
-        AllowCollision: 0
-        SpacingFactor: 1
-        RotationOffset: {x: 0, y: 0, z: 0}
-        NameType: 0
-      IsAdvancesOptionsOpenInEditor: 1
-      IsVariantsOpen: 0
-      VariantsScroll: {x: 0, y: 0}
-      IsOpenInEditor: 1
-    - Name: ColorBox2
-      GameObjectVariants:
-      - {fileID: 9197460500425983938, guid: cc162f1efa3d3fc4fab97ace5e3bc50b, type: 3}
-      Rotation:
-        Constant: {x: 0, y: 0, z: 0}
-        Min: {x: 0, y: 0, z: 0}
-        Max: {x: 0, y: 360, z: 0}
-        Mode: 1
-      Scale:
-        Mode: 1
-        MinScale: {x: 0.7, y: 0.7, z: 0.7}
-        MaxScale: {x: 1, y: 1, z: 1}
-        UnitformScaling: 1
-      AdvancedOptions:
-        AllowPlacementCollisions: 0
-        MultiplyPrefabScale: 1
-        UsePrefabRotation: 0
-        UsePrefabHeight: 1
-        UseIndividualGroundHeight: 1
-        AllowCollision: 0
-        SpacingFactor: 1
-        RotationOffset: {x: 0, y: 0, z: 0}
-        NameType: 0
-      IsAdvancesOptionsOpenInEditor: 0
-      IsVariantsOpen: 0
-      VariantsScroll: {x: 0, y: 0}
-      IsOpenInEditor: 1
-    - Name: Foundation
-      GameObjectVariants:
-      - {fileID: 7735042527192002771, guid: ec9419de64fe27746878255f1463350d, type: 3}
-      - {fileID: 7735042527192002771, guid: ff0600ee7f05db24ab8f59e112155aa8, type: 3}
-      - {fileID: 7735042527192002771, guid: e0ef3771c3d52c24cb288cddb6e3617e, type: 3}
-      Rotation:
-        Constant: {x: 0, y: 0, z: 0}
-        Min: {x: 0, y: 0, z: 90}
-        Max: {x: 0, y: 360, z: 90}
-        Mode: 1
-      Scale:
-        Mode: 0
-        MinScale: {x: 0.15, y: 1, z: 1}
-        MaxScale: {x: 1, y: 1, z: 1}
-        UnitformScaling: 1
-      AdvancedOptions:
-        AllowPlacementCollisions: 0
-        MultiplyPrefabScale: 1
-        UsePrefabRotation: 0
-        UsePrefabHeight: 1
-        UseIndividualGroundHeight: 1
-        AllowCollision: 0
-        SpacingFactor: 1
-        RotationOffset: {x: 0, y: 0, z: 0}
-        NameType: 0
-      IsAdvancesOptionsOpenInEditor: 1
-      IsVariantsOpen: 0
-      VariantsScroll: {x: 0, y: 0}
-      IsOpenInEditor: 1
-    NewGroupItem:
-      Name: 
-      GameObjectVariants:
-      - {fileID: 0}
-      Rotation:
-        Constant: {x: 0, y: 0, z: 0}
-        Min: {x: 0, y: 0, z: 0}
-        Max: {x: 0, y: 360, z: 0}
-        Mode: 1
-      Scale:
-        Mode: 3
-        MinScale: {x: 1, y: 1, z: 1}
-        MaxScale: {x: 1, y: 1, z: 1}
-        UnitformScaling: 1
-      AdvancedOptions:
-        AllowPlacementCollisions: 0
-        MultiplyPrefabScale: 1
-        UsePrefabRotation: 0
-        UsePrefabHeight: 1
-        UseIndividualGroundHeight: 1
-        AllowCollision: 0
-        SpacingFactor: 1
-        RotationOffset: {x: 0, y: 0, z: 0}
-        NameType: 0
-      IsAdvancesOptionsOpenInEditor: 0
-      IsVariantsOpen: 0
-      VariantsScroll: {x: 0, y: 0}
-      IsOpenInEditor: 0
-    IsOpenInEditor: 1
