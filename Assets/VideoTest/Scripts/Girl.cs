@@ -8,15 +8,18 @@ public class Girl : MonoBehaviour
 
     public void Happy()
     {
-        StartCoroutine(Delay());
+        animator.Play("Happy");
     }
 
-    IEnumerator Delay()
-    {
-        animator.Play("Happy");
-        yield return new WaitForSeconds(3);
+    public void Talking() {
         animator.Play("Talking");
     }
+
+
+    //IEnumerator Delay()
+    //{
+    //    animator.Play("Happy");
+    //}
 
     public void Crying()
     {

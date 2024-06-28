@@ -8,19 +8,20 @@ public class Boy : MonoBehaviour
 
     public void Happy()
     {
-        StartCoroutine(Delay());
-    }
-        
-    IEnumerator Delay()
-    {
-        yield return new WaitForSeconds(1.5f);
-
+        //StartCoroutine(Delay());
         animator.SetTrigger("Happy");
+    }
 
-        yield return new WaitForSeconds(3);
-
+    public void Talking()
+    {
         animator.SetTrigger("Talking");
     }
+
+    //IEnumerator Delay()
+    //{
+    //    yield return new WaitForSeconds(1.5f);
+    //    animator.SetTrigger("Happy");
+    //}
 
     public void Crying()
     {

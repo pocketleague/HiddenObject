@@ -37,13 +37,16 @@ namespace Video
             CurrentCamState = defaultCamState;
 
             // UI Animation
-            Invoke("Delay", 2);
+            StartCoroutine(Delay());
         }
 
-        void Delay()
+        IEnumerator Delay()
         {
-            ItemPanel.SetActive(true);
+            yield return new WaitForSeconds(2);
             ThoughtBubble.SetActive(true);
+
+            yield return new WaitForSeconds(2);
+            ItemPanel.SetActive(true);
         }
 
         void Update()
@@ -143,8 +146,8 @@ namespace Video
             if (itemCoount == 1)
             {
                 heartParticles1.SetActive(true);
-                girl.Happy();
-                boy.Happy();
+                girl.Talking();
+                boy.Talking();
             }
             if (itemCoount == 2)
             {
